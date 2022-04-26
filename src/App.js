@@ -19,8 +19,7 @@ export default function App() {
       if (data.err) {
         alert(data.err)
       } else {
-        console.log(data);
-        console.log("היי מיכל");
+        console.log(data.sort());
         setMembers(data)
       }
     })()

@@ -230,6 +230,8 @@ code {
 
 /* Header Comp */
 .header{
+  position: fixed;
+  width: 100%;
   background-color: #184885;
   height: 90px;
   color: #DDF1FD;
@@ -300,6 +302,7 @@ code {
 @media screen and (min-width: 800px) {
   .header {
     flex-direction: row ;
+    
   }
   .form-control {
     width: 600px;
@@ -327,4 +330,9 @@ code {
 
 .filterContainer{
   padding: 5px 30px;
+}
+
+.filters{
+  display: flex;
+  justify-content: center;
 }
