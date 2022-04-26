@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react'
+import { BrowserRouter as Router } from 'react-router-dom'
+import Headers from './compoents/Headers'
+import Main from './compoents/Main'
 
-function App() {
+export default function App() {
+
+  const [members, setMembers] = useState([])
+  const [searchValue, setSearchValue] = useState("")
+
+  useEffect(() => {
+    (async () => {
+      const res = await fetch('https://keneset-api.herokuapp.com/members', {
+        method: 'GET',
+        headers: { 'content-type': 'application/json' },
+        credentials: "include"
+      })
+      const data = await res.json();
+      if (data.err) {
+        alert(data.err)
+      } else {
+        console.log(data);
+        console.log("היי מיכל");
+        setMembers(data)
+      }
+    })()
+
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Router>
+        <Headers members={members} setSearchValue={setSearchValue} searchValue={searchValue} />
+        <Main members={members} searchValue={searchValue}/>
+      </Router>
     </div>
-  );
+  )
 }
-
-export default App;
