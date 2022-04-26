@@ -1,6 +1,8 @@
+import { LogoDev } from '@mui/icons-material'
 import React from 'react'
 import { Form, FormControl } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
+
 
 export default function Headers({ searchValue,setSearchValue }) {
 
@@ -29,7 +31,8 @@ export default function Headers({ searchValue,setSearchValue }) {
       </div>
       <div className='logo'>
         <h5 onClick={() => goTo("contactus")}>צור קשר</h5>
-        <h2 onClick={() => goTo("")}>כנסת ישראל</h2>
+        {/* <h2 onClick={() => goTo("")}>כנסת ישראל</h2> */}
+        <img src="https://i.ibb.co/HPpJqPp/logo.png" alt="" onClick={() => goTo("")} />
       </div>
     </div>
   )

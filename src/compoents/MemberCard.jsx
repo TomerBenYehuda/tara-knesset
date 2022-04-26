@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Card, Modal, Button, Container, Col, Row, Tooltip,OverlayTrigger } from 'react-bootstrap';
+import { Card, Modal, Button, Container, Col, Row, Tooltip, OverlayTrigger } from 'react-bootstrap';
 import PhoneEnabledIcon from '@mui/icons-material/PhoneEnabled';
 import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
 import EmailIcon from '@mui/icons-material/Email';
@@ -56,6 +56,8 @@ export default function MemberCard({ members }) {
 
     return (
         <>
+        
+
             <Card style={{ width: '18rem' }} key={members.memberID} onClick={handleShow}>
                 <Card.Img src={members.picture} />
                 <Card.Body>
@@ -87,7 +89,7 @@ export default function MemberCard({ members }) {
                                     delay={{ show: 100, hide: 300 }}
                                     overlay={doverTooltip}
                                 >
-                                <p className='smalltitle'>דובר <HelpOutlineOutlinedIcon fontSize='small'/></p>
+                                    <p className='smalltitle'>דובר <HelpOutlineOutlinedIcon fontSize='small' /></p>
                                 </OverlayTrigger>
                                 <p className='littletitle'>שם: {mid.speaker_name}</p>
                                 <p className='littletitle'>טלפון: {mid.speaker_phone}</p>
@@ -96,7 +98,7 @@ export default function MemberCard({ members }) {
                                     delay={{ show: 100, hide: 300 }}
                                     overlay={consultTooltipp}
                                 >
-                                <p className='smalltitle'>יועץ פוליטי <HelpOutlineOutlinedIcon fontSize='small'/></p>
+                                    <p className='smalltitle'>יועץ פוליטי <HelpOutlineOutlinedIcon fontSize='small' /></p>
                                 </OverlayTrigger>
                                 <p className='littletitle'>שם: {mid.political_consultant_name}</p>
                                 <p className='littletitle'>טלפון: {mid.political_consultant_phone}</p>
@@ -105,7 +107,7 @@ export default function MemberCard({ members }) {
                                     delay={{ show: 100, hide: 300 }}
                                     overlay={headTooltipp}
                                 >
-                                <p className='smalltitle'>ראש מטה <HelpOutlineOutlinedIcon fontSize='small'/></p>
+                                    <p className='smalltitle'>ראש מטה <HelpOutlineOutlinedIcon fontSize='small' /></p>
                                 </OverlayTrigger>
                                 <p className='littletitle'>שם: {mid.head_office_name}</p>
                                 <p className='littletitle'>טלפון: {mid.head_office_phone}</p>

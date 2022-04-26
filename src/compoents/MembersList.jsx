@@ -22,6 +22,8 @@ export default function MembersList({ members, searchValue, kentsetFilter, perso
 
                     :
                     <>
+                        {/* {members.map(members => <MemberCard key={members.memberID} members={members} />)}
+                        {console.log(kentsetFilter)} */}
                         {kenesst_role.map(members => <MemberCard key={members.memberID} members={members} />)}
                         {gov_role.map(members => <MemberCard key={members.memberID} members={members} />)}
                         {party.map(members => <MemberCard key={members.memberID} members={members} />)}

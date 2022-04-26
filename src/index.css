@@ -24,6 +24,8 @@ code {
   object-fit: fill;
 }
 
+
+
 .centertext {
   position: absolute;
   top: 50%;
@@ -58,6 +60,7 @@ code {
   justify-content: space-evenly;
   align-items: center;
   flex-direction: row;
+  margin-top: 70px;
   margin-bottom: 15px;
   margin-left: 30px;
   margin-right: 30px;
@@ -232,6 +235,7 @@ code {
 .header{
   position: fixed;
   width: 100%;
+  z-index: 10;
   background-color: #184885;
   height: 90px;
   color: #DDF1FD;
@@ -269,11 +273,15 @@ code {
   align-items: center;
 }
 
-.logo >h2 {
+
+.logo >h5 {
   margin-left: 30px;
   margin-bottom: 0;
 }
-.logo >h5 {
+
+.logo > img {
+  width: 30px;
+  height: 44px;
   margin-left: 30px;
   margin-bottom: 0;
 }
