@@ -10,7 +10,7 @@ export default function App() {
 
   useEffect(() => {
     (async () => {
-      const res = await fetch('https://keneset-api.herokuapp.com/members', {
+      const res = await fetch('http://localhost:5000/members', {
         method: 'GET',
         headers: { 'content-type': 'application/json' },
         credentials: "include"

@@ -28,7 +28,7 @@ const MenuPropss = {
 
 const position = ['אופוזיציה', "קואליציה"]
 
-export default function FiltersComp({ knessetRole, setKentsetFilter, govRole, party, additionalRole, members }) {
+export default function FiltersComp({ knessetRole, setKentsetFilter, govRole, party, additionalRole, member,setIstrue}) {
 
     const [filtername, setFiltername] = React.useState([]);
     const [filtername2, setFiltername2] = React.useState([]);
@@ -36,46 +36,6 @@ export default function FiltersComp({ knessetRole, setKentsetFilter, govRole, pa
     const [filtername4, setFiltername4] = React.useState([]);
     const [filtername5, setFiltername5] = React.useState([]);
 
-    const filterFunction = (kentsetFilter) => {
-
-        if (kentsetFilter.kenesst_role[0]) {
-            members= members.filter(members => members.kenesst_role.includes(kentsetFilter))
-        }
-        if (kentsetFilter.gov_role) {
-            members= members.filter(members => members.gov_role.includes(kentsetFilter))
-        }
-        if (kentsetFilter.party) {
-            members= members.filter(members => members.party.includes(kentsetFilter))
-        }
-        if (kentsetFilter.additional_role) {
-            members= members.filter(members => members.additional_role.includes(kentsetFilter))
-        }
-        if (kentsetFilter.position) {
-            members= members.filter(members => members.position.includes(kentsetFilter))
-        }
-
-        // switch (kentsetFilter) {
-        //     case kentsetFilter.kenesst_role:
-        //         members = members.filter(members => members.kenesst_role.includes(kentsetFilter))
-        //         break;
-        //     case kentsetFilter.gov_role:
-        //         members = members.filter(members => members.gov_role.includes(kentsetFilter))
-        //         break;
-        //     case kentsetFilter.party:
-        //         members = members.filter(members => members.party.includes(kentsetFilter))
-        //         break;
-        //     case kentsetFilter.additional_role:
-        //         members = members.filter(members => members.additional_role.includes(kentsetFilter))
-        //         break;
-        //     case kentsetFilter.position:
-        //         members = members.filter(members => members.position.includes(kentsetFilter))
-        //         break;
-
-        //     default:
-        //         break;
-        // }
-
-    }
 
     const handleChange = (event) => {
         const {
@@ -85,9 +45,9 @@ export default function FiltersComp({ knessetRole, setKentsetFilter, govRole, pa
             // On autofill we get a stringified value.
             typeof value === 'string' ? value.split(',') : value,
         );
-        setKentsetFilter(event.target.value);
-        // setKentsetFilter({knesset_role:event.target.value});
-        // filterFunction()
+        setKentsetFilter(...event.target.value);
+        setIstrue(false)
+       
     };
 
     const handleChange2 = (event) => {
@@ -99,8 +59,7 @@ export default function FiltersComp({ knessetRole, setKentsetFilter, govRole, pa
             typeof value === 'string' ? value.split(',') : value,
         );
         setKentsetFilter(event.target.value);
-        // setKentsetFilter({gov_role:event.target.value});
-        // filterFunction()
+       
     };
 
     const handleChange3 = (event) => {
@@ -112,8 +71,7 @@ export default function FiltersComp({ knessetRole, setKentsetFilter, govRole, pa
             typeof value === 'string' ? value.split(',') : value,
         );
         setKentsetFilter(event.target.value);
-        // setKentsetFilter({party:event.target.value});
-        // filterFunction()
+       
     };
 
     const handleChange4 = (event) => {
@@ -125,8 +83,7 @@ export default function FiltersComp({ knessetRole, setKentsetFilter, govRole, pa
             typeof value === 'string' ? value.split(',') : value,
         );
         setKentsetFilter(event.target.value);
-        // setKentsetFilter({additional_role:event.target.value});
-        // filterFunction()
+       
     };
 
     const handleChange5 = (event) => {
@@ -138,8 +95,7 @@ export default function FiltersComp({ knessetRole, setKentsetFilter, govRole, pa
             typeof value === 'string' ? value.split(',') : value,
         );
         setKentsetFilter(event.target.value);
-        // setKentsetFilter({position:event.target.value});
-        // filterFunction()
+        
     };
 
     return (
