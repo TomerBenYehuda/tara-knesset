@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import MemberCard from './MemberCard';
 
 
@@ -15,7 +15,7 @@ export default function MembersList({ members, searchValue, kentsetFilter }) {
     return (
         <div id='memeberlist'>
             {
-                kentsetFilter == "" ?
+                kentsetFilter === "" ?
                     <>
                         {searchValue === "" ? members.map(members => <MemberCard key={members.memberID} members={members} />) : cc.map(members => <MemberCard key={members.memberID} members={members} />)}
                     </>

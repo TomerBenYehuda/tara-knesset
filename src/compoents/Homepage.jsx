@@ -30,7 +30,7 @@ export default function Homepage({ members, searchValue }) {
 
     useEffect(() => {
         (async () => {
-            const res = await fetch('http://localhost:5000/filter/knesset_role', {
+            const res = await fetch('https://keneset-api.herokuapp.com/filter/knesset_role', {
                 method: 'GET',
                 headers: { 'content-type': 'application/json' },
                 credentials: "include"
@@ -46,7 +46,7 @@ export default function Homepage({ members, searchValue }) {
         })();
 
         (async () => {
-            const res = await fetch('http://localhost:5000/filter/gov_role', {
+            const res = await fetch('https://keneset-api.herokuapp.com/filter/gov_role', {
                 method: 'GET',
                 headers: { 'content-type': 'application/json' },
                 credentials: "include"
@@ -61,7 +61,7 @@ export default function Homepage({ members, searchValue }) {
         })();
 
         (async () => {
-            const res = await fetch('http://localhost:5000/filter/party', {
+            const res = await fetch('https://keneset-api.herokuapp.com/filter/party', {
                 method: 'GET',
                 headers: { 'content-type': 'application/json' },
                 credentials: "include"
@@ -76,7 +76,7 @@ export default function Homepage({ members, searchValue }) {
         })();
 
         (async () => {
-            const res = await fetch('http://localhost:5000/filter/additional_role', {
+            const res = await fetch('https://keneset-api.herokuapp.com/filter/additional_role', {
                 method: 'GET',
                 headers: { 'content-type': 'application/json' },
                 credentials: "include"
@@ -95,7 +95,7 @@ export default function Homepage({ members, searchValue }) {
     
 
     const securityFilter = async () => {
-        const res = await fetch('http://localhost:5000/filter/security', {
+        const res = await fetch('https://keneset-api.herokuapp.com/filter/security', {
             method: 'GET',
             headers: { 'content-type': 'application/json' },
             credentials: "include"
@@ -112,7 +112,7 @@ export default function Homepage({ members, searchValue }) {
     }
 
     const lawpoliceFilter = async () => {
-        const res = await fetch('http://localhost:5000/filter/lawpolice', {
+        const res = await fetch('https://keneset-api.herokuapp.com/filter/lawpolice', {
             method: 'GET',
             headers: { 'content-type': 'application/json' },
             credentials: "include"
@@ -129,7 +129,7 @@ export default function Homepage({ members, searchValue }) {
     }
 
     const foreignaffairsFilter = async () => {
-        const res = await fetch('http://localhost:5000/filter/foreignaffairs', {
+        const res = await fetch('https://keneset-api.herokuapp.com/filter/foreignaffairs', {
             method: 'GET',
             headers: { 'content-type': 'application/json' },
             credentials: "include"
@@ -146,7 +146,7 @@ export default function Homepage({ members, searchValue }) {
     }
 
     const healthwelfareFilter = async () => {
-        const res = await fetch('http://localhost:5000/filter/healthwelfare', {
+        const res = await fetch('https://keneset-api.herokuapp.com/filter/healthwelfare', {
             method: 'GET',
             headers: { 'content-type': 'application/json' },
             credentials: "include"
@@ -163,7 +163,7 @@ export default function Homepage({ members, searchValue }) {
     }
 
     const environmentFilter = async () => {
-        const res = await fetch('http://localhost:5000/filter/environment', {
+        const res = await fetch('https://keneset-api.herokuapp.com/filter/environment', {
             method: 'GET',
             headers: { 'content-type': 'application/json' },
             credentials: "include"
@@ -180,7 +180,7 @@ export default function Homepage({ members, searchValue }) {
     }
 
     const cultureFilter = async () => {
-        const res = await fetch('http://localhost:5000/filter/culture', {
+        const res = await fetch('https://keneset-api.herokuapp.com/filter/culture', {
             method: 'GET',
             headers: { 'content-type': 'application/json' },
             credentials: "include"
@@ -197,7 +197,7 @@ export default function Homepage({ members, searchValue }) {
     }
 
     const economyFilter = async () => {
-        const res = await fetch('http://localhost:5000/filter/economy', {
+        const res = await fetch('https://keneset-api.herokuapp.com/filter/economy', {
             method: 'GET',
             headers: { 'content-type': 'application/json' },
             credentials: "include"
@@ -214,7 +214,7 @@ export default function Homepage({ members, searchValue }) {
     }
 
     const educationFilter = async () => {
-        const res = await fetch('http://localhost:5000/filter/education', {
+        const res = await fetch('https://keneset-api.herokuapp.com/filter/education', {
             method: 'GET',
             headers: { 'content-type': 'application/json' },
             credentials: "include"
@@ -238,25 +238,7 @@ export default function Homepage({ members, searchValue }) {
             {
                 istrue ? <SubjectMemeberList showMe={showMe} security={security} lawpolice={lawpolice} foreignaffairs={foreignaffairs} healthwelfare={healthwelfare} environment={environment} culture={culture} economy={economy} education={education}/>  : <MembersList members={members} searchValue={searchValue}  kentsetFilter={kentsetFilter}  />
             }
-            {/* <SubjectMemeberList security={security}/>
-            <MembersList members={members} searchValue={searchValue}  kentsetFilter={kentsetFilter}  /> */}
         </div>
     )
 }
 
-
-
-
-// const filterme = async () => {
-//     const res = await fetch('http://localhost:5000/filter/knesset_role', {
-//         method: "post",
-//         headers: { 'content-type': 'application/json' },
-//         body: JSON.stringify({ search: kentsetFilter }),
-//         credentials: "include"
-//     })
-//     const data = await res.json()
-//     setUpdate(data)
-//     console.log(data);
-    
-
-// }

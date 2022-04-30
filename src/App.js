@@ -10,7 +10,7 @@ export default function App() {
 
   useEffect(() => {
     (async () => {
-      const res = await fetch('http://localhost:5000/members', {
+      const res = await fetch('https://keneset-api.herokuapp.com/members', {
         method: 'GET',
         headers: { 'content-type': 'application/json' },
         credentials: "include"
@@ -30,7 +30,7 @@ export default function App() {
     <div>
       <Router>
         <Headers members={members} setSearchValue={setSearchValue} searchValue={searchValue} />
-        <Main members={members} searchValue={searchValue}/>
+        <Main members={members} searchValue={searchValue} />
       </Router>
     </div>
   )

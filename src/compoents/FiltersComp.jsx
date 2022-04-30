@@ -59,7 +59,7 @@ export default function FiltersComp({ knessetRole, setKentsetFilter, govRole, pa
             typeof value === 'string' ? value.split(',') : value,
         );
         setKentsetFilter(event.target.value);
-       
+        setIstrue(false)
     };
 
     const handleChange3 = (event) => {
@@ -71,7 +71,7 @@ export default function FiltersComp({ knessetRole, setKentsetFilter, govRole, pa
             typeof value === 'string' ? value.split(',') : value,
         );
         setKentsetFilter(event.target.value);
-       
+        setIstrue(false)
     };
 
     const handleChange4 = (event) => {
@@ -83,7 +83,7 @@ export default function FiltersComp({ knessetRole, setKentsetFilter, govRole, pa
             typeof value === 'string' ? value.split(',') : value,
         );
         setKentsetFilter(event.target.value);
-       
+        setIstrue(false)
     };
 
     const handleChange5 = (event) => {
@@ -95,7 +95,7 @@ export default function FiltersComp({ knessetRole, setKentsetFilter, govRole, pa
             typeof value === 'string' ? value.split(',') : value,
         );
         setKentsetFilter(event.target.value);
-        
+        setIstrue(false)
     };
 
     return (

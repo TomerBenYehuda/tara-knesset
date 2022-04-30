@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import MemberCard from './MemberCard';
 
 export default function SubjectMemeberList({ showMe, security, lawpolice, foreignaffairs, healthwelfare, environment, culture, economy, education }) {
@@ -7,31 +7,31 @@ export default function SubjectMemeberList({ showMe, security, lawpolice, foreig
     return (
         <div id='memeberlist'>
 
-            {showMe == "" && security.map(members => <MemberCard key={members.memberID} members={members} />)}
+            {showMe === "" && security.map(members => <MemberCard key={members.memberID} members={members} />)}
 
-            {showMe == "law" && lawpolice.map(members => <MemberCard key={members.memberID} members={members} />) }
+            {showMe === "law" && lawpolice.map(members => <MemberCard key={members.memberID} members={members} />) }
 
-            {showMe == "foreign" &&
+            {showMe === "foreign" &&
                 foreignaffairs.map(members => <MemberCard key={members.memberID} members={members} />)
             }
 
-            {showMe == "health" &&
+            {showMe === "health" &&
                 healthwelfare.map(members => <MemberCard key={members.memberID} members={members} />)
             }
 
-            {showMe == "envi" &&
+            {showMe === "envi" &&
                 environment.map(members => <MemberCard key={members.memberID} members={members} />)
             }
 
-            {showMe == "culture" &&
+            {showMe === "culture" &&
                 culture.map(members => <MemberCard key={members.memberID} members={members} />)
             }
 
-            {showMe == "econ" &&
+            {showMe === "econ" &&
                 economy.map(members => <MemberCard key={members.memberID} members={members} />)
             }
 
-            {showMe == "edu" &&
+            {showMe === "edu" &&
                 education.map(members => <MemberCard key={members.memberID} members={members} />)
             }
 
