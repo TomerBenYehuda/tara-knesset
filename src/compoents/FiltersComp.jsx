@@ -45,7 +45,7 @@ export default function FiltersComp({ knessetRole, setKentsetFilter, govRole, pa
             // On autofill we get a stringified value.
             typeof value === 'string' ? value.split(',') : value,
         );
-        setKentsetFilter(...event.target.value);
+        setKentsetFilter(event.target.value);
         setIstrue(false)
        
     };
