@@ -14,6 +14,8 @@ code {
   font-family: 'Heebo', sans-serif;
 }
 
+/* ///////////////// First Page Compo////////////// */
+
 .kenestimg {
   position: relative;
   width: 98.9vw;
@@ -23,8 +25,6 @@ code {
   background-size: cover;
   object-fit: fill;
 }
-
-
 
 .centertext {
   position: absolute;
@@ -50,9 +50,9 @@ code {
   left: 50%;
 }
 
-.container-fluid {
-  padding-left: 0px;
-}
+/* ////////// End first page/// */
+
+/* /////// Memeber List and Memeber Card Comp/////////////// */
 
 #memeberlist {
   display: flex;
@@ -67,6 +67,10 @@ code {
   /* display: grid; */
   /* grid-template-columns:repeat(auto-fit,minmx(200px,1fr)); */
   /* gap: 20px; */
+}
+
+.container-fluid {
+  padding-left: 0px;
 }
 
 .MuiTypography-h5 {
@@ -166,7 +170,6 @@ code {
 }
 
 .imgmember {
-  /* margin-top: 10px; */
   position: absolute;
   left: 862px;
   top: 40px;
@@ -174,8 +177,7 @@ code {
   height: 234px;
   border: 8px solid #749BB3;
   border-radius: 85px;
-  /* margin: auto; */
-  /* display: block; */
+  
 }
 
 .rowfirst {
@@ -230,8 +232,10 @@ code {
   color: #184885;
 }
 
+/* /////////////////////////////// End of Memeber //////////////// */
 
-/* Header Comp */
+/* //////////////////////////////////Header Comp//////////////////////////////// */
+
 .header {
   position: fixed;
   width: 100%;
@@ -339,6 +343,9 @@ code {
   flex-direction: row-reverse;
 }
 
+
+/* /////////////////////////////////// Filter Comp ////////////////// */
+
 .filterContainer {
   padding: 5px 30px;
 }
@@ -349,7 +356,7 @@ code {
 }
 
 
-/* Subject Filter Section */
+/* //////////////////////////////Subject Filter Section//////////////////// */
 
 .subjectsection {
   text-align: right;
@@ -411,4 +418,72 @@ code {
   left: 54px;
   right: 54px;
   margin-bottom: 0;
+}
+
+
+
+/* /////////////////////////////Footer Section///////////////////////////////// */
+
+.footercomp {
+  background-color: #184885;
+  height: 205px;
+  
+}
+
+.footersection {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 80px;
+}
+
+.linksfooter {
+  display: flex;
+}
+
+.linksfooter>p {
+  margin-left: 50px;
+  color: #FFFEFF;
+  cursor: pointer;
+}
+
+.iconsfooter {
+  width: 24px;
+  height: 24px;
+  border-radius: 5px;
+  background: #FFFFFF;
+  padding: 4px;
+  margin-left: 5px;
+}
+
+hr {
+  color: white;
+  width:80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.rights{
+  color: white;
+  text-align: center;
+}
+
+/* ///////////////Contact Us Section/////////////////////////////////////// */
+
+.contactus {
+  padding-top: 90px;
+}
+
+.container-contactus {
+  margin-top: -160px;
+  text-align: center;
+
+}
+
+.form-contactus {
+  background: #FFFEFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  width: 550px;
+  height: 400px;
 }

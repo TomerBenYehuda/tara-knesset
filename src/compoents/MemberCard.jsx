@@ -40,17 +40,17 @@ export default function MemberCard({ members }) {
 
     const doverTooltip = (props) => (
         <Tooltip id="button-tooltip" {...props}>
-            דובר זה מישהו שמדבר מטעמך
+          הדובר מופקד על ייצוג של חבר הכנסת מול אמצעי התקשורת, ולכן באופן ישיר גם מול האזרחים. על מנת להשיג את תגובתו או עמדתו של חבר כנסת על נושא מסוים, מומלץ לפנות לדובר
         </Tooltip>
     );
     const consultTooltipp = (props) => (
         <Tooltip id="button-tooltip" {...props}>
-            יועץ זה מישהו שמדבר מטעמך
+            היועץ פוליטי מסייע לחבר הכנסת לנתח סיטואציות שונות ולבחור כיצד לנהוג ולהגיב אליהן, בדגש על התנהלות מול גורמים פוליטיים
         </Tooltip>
     );
     const headTooltipp = (props) => (
         <Tooltip id="button-tooltip" {...props}>
-            ראש מטה זה מישהו שמדבר מטעמך
+            ראש מטה מרכז את הפעילות השוטפת והפרויקטים המיוחדים בהם עוסקת לשכת חבר הכנסת
         </Tooltip>
     );
 
