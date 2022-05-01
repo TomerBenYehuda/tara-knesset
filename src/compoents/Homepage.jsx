@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import FiltersComp from './FiltersComp';
 import FirstPage from './FirstPage';
+import Footer from './Footer';
 
 import MembersList from './MembersList';
 import SubFilter from './SubFilter';
@@ -238,6 +239,7 @@ export default function Homepage({ members, searchValue }) {
             {
                 istrue ? <SubjectMemeberList showMe={showMe} security={security} lawpolice={lawpolice} foreignaffairs={foreignaffairs} healthwelfare={healthwelfare} environment={environment} culture={culture} economy={economy} education={education}/>  : <MembersList members={members} searchValue={searchValue}  kentsetFilter={kentsetFilter}  />
             }
+            <Footer/>
         </div>
     )
 }
