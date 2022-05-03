@@ -31,7 +31,6 @@ export default function Headers({ searchValue,setSearchValue }) {
       </div>
       <div className='logo'>
         <h5 onClick={() => goTo("contactus")}>צור קשר</h5>
-        <h5 onClick={() => goTo("tara-admin")}>מנהל טרה</h5>
         <img src="https://i.ibb.co/HPpJqPp/logo.png" alt="" onClick={() => goTo("")} />
       </div>
     </div>
