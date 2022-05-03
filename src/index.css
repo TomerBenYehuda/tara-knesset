@@ -487,3 +487,22 @@ hr {
   width: 550px;
   height: 400px;
 }
+
+/* ////////////Admin Modal////////// */
+
+
+.adminmodalheader {
+  background: linear-gradient(180deg, #DDF1FD 0%, #EEF8FE 100%);
+  border-radius: 24px 24px 0 0;
+  position: relative;
+  padding: 0rem 1rem;
+}
+
+.adminmodalheader>h4 {
+  margin-bottom: 0px;
+  text-align: right;
+}
+
+.adminmodalcol>p {
+  margin-bottom: 4px;
+}
