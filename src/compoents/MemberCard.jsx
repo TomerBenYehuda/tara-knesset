@@ -61,7 +61,7 @@ export default function MemberCard({ members }) {
             <Card style={{ width: '18rem' }} key={members.memberID} onClick={handleShow}>
                 <Card.Img src={members.picture} />
                 <Card.Body>
-                    <Card.Title>{members.first_name} {members.last_name}</Card.Title>
+                    <Card.Title dir="rtl">{members.first_name} {members.last_name}</Card.Title>
                     <Card.Text>
                         {members.gov_role === "null" ? " " : members.gov_role.split(',', 1).splice(0)}
                         {/* {members.gov_role} */}
@@ -84,7 +84,7 @@ export default function MemberCard({ members }) {
                             <Col xs={4}></Col>
                         </Row>
                         <Row className='rowfirst'>
-                            <Col xs={4}>
+                            <Col xs={4} className='infowork'>
                                 <OverlayTrigger
                                     placement="right"
                                     delay={{ show: 100, hide: 300 }}
@@ -113,7 +113,7 @@ export default function MemberCard({ members }) {
                                 <p className='littletitle'>שם: {mid.head_office_name === "null" ? "אין" : mid.head_office_name}</p>
                                 <p className='littletitle'>טלפון: {mid.head_office_phone === "null" ? "אין" : mid.head_office_phone}</p>
                             </Col>
-                            <Col xs={5}>
+                            <Col xs={5} className='infowork'>
                                 <p className='smalltitle'>תפקיד בממשלה: {mid.gov_role === "null" ? "אין" : mid.gov_role}</p>
                                 <p className='littletitle'>סיעה: {mid.party}</p>
                                 <p className='smalltitle'>תפקיד בכנסת</p>
@@ -122,7 +122,7 @@ export default function MemberCard({ members }) {
                                 <p className='littletitle'>{mid.additional_role === "null" ? "" : mid.additional_role}</p>
                             </Col>
                             <Col xs={3} className='infomemebr'>
-                                <p>{mid.first_name} {mid.last_name} <WhatsappTwoToneIcon /></p>
+                                <p dir="rtl"><WhatsappTwoToneIcon /> {mid.first_name} {mid.last_name} </p>
                                 <p>{mid.email === "null" ? "אין" : mid.email} <EmailIcon /></p>
                                 <p>{mid.facebook.split('/').splice(3)} <FacebookRoundedIcon /></p>
                                 <p>{mid.twitter === "null" ? "אין" : mid.twitter.split('/').splice(3)} <TwitterIcon /></p>

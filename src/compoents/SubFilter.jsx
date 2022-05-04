@@ -70,7 +70,7 @@ export default function SubFilter({ securityFilter, lawpoliceFilter, foreignaffa
                         <h5 className="filtertext">חינוך</h5>
                     </div>
                     <div className='filterimagecontainer' onClick={handleEnvironmentFilter}>
-                        <img src="https://i.ibb.co/GnkP2Br/Rectangle-32.png" alt="Rectangle-28-1" border="0" ></img>
+                        <img src="https://i.ibb.co/zb8Fpd5/Rectangle-30.png" alt="Rectangle-28-1" border="0" ></img>
                         <h5 className="filtertext">איכות הסביבה</h5>
                     </div>
                 </div>
@@ -80,7 +80,7 @@ export default function SubFilter({ securityFilter, lawpoliceFilter, foreignaffa
                         <h5 className="filtertext">בריאות ורווחה</h5>
                     </div>
                     <div className='filterimagecontainer' onClick={handleSecurity}>
-                        <img src="https://i.ibb.co/zb8Fpd5/Rectangle-30.png" alt="Rectangle-28-1" border="0" ></img>
+                        <img src="https://i.ibb.co/GnkP2Br/Rectangle-32.png" alt="Rectangle-28-1" border="0" ></img>
                         <h5 className="filtertext">בטחון</h5>
                     </div>
                     <div className='filterimagecontainer' onClick={handleforeignaffairs}>
