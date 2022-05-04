@@ -86,7 +86,7 @@ code {
 
 .card {
   width: 442.58px;
-  height: 370.66px;
+  height: 510px;
   text-align: right;
   padding: 20px;
   margin: 20px;
@@ -106,7 +106,7 @@ code {
 
 .card>img {
   width: 250px;
-  height: 200px;
+  height: 285px;
   display: block;
   background-position: center;
   transition: 0.3s ease-in-out;
@@ -166,7 +166,7 @@ code {
   background: linear-gradient(180deg, #DDF1FD 0%, #EEF8FE 100%);
   border-radius: 24px 24px 0 0;
   position: relative;
-  padding: 3rem 1rem;
+  padding: 2rem 1rem;
 }
 
 .imgmember {
