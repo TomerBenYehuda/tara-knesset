@@ -25,7 +25,6 @@ export default function AdminLogin() {
             credentials: "include"
         })
         const data = await res.json()
-        setdatalogin(data)
         if (data.err) {
             document.getElementById("err").innerHTML = data.err
 
