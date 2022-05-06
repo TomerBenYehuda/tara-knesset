@@ -511,3 +511,24 @@ hr {
 .adminmodalcol>p {
   margin-bottom: 4px;
 }
+
+.login{
+  display: flex;
+  justify-content: center;
+  padding-top: 150px;
+  text-align: center;
+}
+
+
+.MuiFormGroup-root{
+  justify-content: center
+}
+
+#err{
+  margin-top: 5px;
+  color: red;
+}
+
+.css-1t6e9jv-MuiCardActions-root{
+  justify-content: center;
+}

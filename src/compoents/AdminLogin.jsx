@@ -33,8 +33,6 @@ export default function AdminLogin() {
             localStorage.name = data.adminName
 
         }
-        console.log(data);
-
     }
 
 
