@@ -286,6 +286,7 @@ code {
 .logo>h5 {
   margin-left: 30px;
   margin-bottom: 0;
+  cursor: pointer;
 }
 
 
@@ -294,12 +295,14 @@ code {
   height: 44px;
   margin-left: 30px;
   margin-bottom: 0;
+  cursor: pointer;
 }
 
 .logotara {
   width: 150px;
   margin-left: 30px;
   margin-bottom: 0;
+  cursor: pointer;
 }
 
 /* Media Screen Header */

@@ -10,7 +10,7 @@ export default function ContactUs() {
       <Container className='container-contactus' fluid>
         <Row>
           <Col>
-            <h1>Call Now</h1>
+            <h1>תגידו לי מה לכתוב פה</h1>
           </Col>
 
           <Col>
