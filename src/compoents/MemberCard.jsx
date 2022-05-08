@@ -122,11 +122,10 @@ export default function MemberCard({ members }) {
                                 <p className='littletitle'>{mid.additional_role === "null" ? "" : mid.additional_role}</p>
                             </Col>
                             <Col xs={3} className='infomemebr'>
-                                <p dir="rtl"><WhatsappTwoToneIcon /> {mid.first_name} {mid.last_name} </p>
-                                <p>{mid.email === "null" ? "אין" : mid.email} <EmailIcon /></p>
-                                <p>{mid.facebook.split('/').splice(3)} <FacebookRoundedIcon /></p>
-                                <p>{mid.twitter === "null" ? "אין" : mid.twitter.split('/').splice(3)} <TwitterIcon /></p>
-
+                                <p dir="rtl"><a href={`https://wa.me/972${mid.personal_phone.replace(/-/, "")}`}><WhatsappTwoToneIcon /></a> {mid.first_name} {mid.last_name} </p>
+                                <p>{mid.email === "null" ? "אין" : mid.email} <a href={`mailto:${mid.email}`}><EmailIcon /></a></p>
+                                <p>{mid.facebook.split('/').splice(3)} <a href={mid.facebook} rel="noreferrer" target="_blank"><FacebookRoundedIcon /></a></p>
+                                <p>{mid.twitter === "null" ? "אין" : mid.twitter.split('/').splice(3)} <a href={mid.twitter} rel="noreferrer" target="_blank"><TwitterIcon /></a> </p>
                             </Col>
                         </Row>
                     </Container>
