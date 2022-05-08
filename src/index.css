@@ -44,7 +44,7 @@ code {
   text-transform: uppercase;
 }
 
-.css-175a0ai-MuiSvgIcon-root {
+.icondown {
   position: absolute;
   top: 80%;
   left: 50%;
@@ -288,9 +288,16 @@ code {
   margin-bottom: 0;
 }
 
-.logo>img {
+
+.logojo {
   width: 30px;
   height: 44px;
+  margin-left: 30px;
+  margin-bottom: 0;
+}
+
+.logotara {
+  width: 150px;
   margin-left: 30px;
   margin-bottom: 0;
 }
@@ -330,11 +337,7 @@ code {
   }
 }
 
-.filterContainer {
-  background-color: #EEF8FE;
-  height: 289px;
-  text-align: right;
-}
+
 
 .css-10hburv-MuiTypography-root {
   color: #184885;
@@ -351,13 +354,18 @@ code {
 
 /* /////////////////////////////////// Filter Comp ////////////////// */
 
+
 .filterContainer {
+  background-color: #EEF8FE;
+  height: 150px;
+  text-align: right;
   padding: 5px 30px;
 }
 
 .filters {
   display: flex;
   justify-content: center;
+  margin-top: 30px;
 }
 
 

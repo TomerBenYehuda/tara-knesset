@@ -123,9 +123,9 @@ export default function MemberCard({ members }) {
                             </Col>
                             <Col xs={3} className='infomemebr'>
                                 <p dir="rtl"><a href={`https://wa.me/972${mid.personal_phone.replace(/-/, "")}`}><WhatsappTwoToneIcon /></a> {mid.first_name} {mid.last_name} </p>
-                                <p>{mid.email === "null" ? "אין" : mid.email} <a href={`mailto:${mid.email}`}><EmailIcon /></a></p>
-                                <p>{mid.facebook.split('/').splice(3)} <a href={mid.facebook} rel="noreferrer" target="_blank"><FacebookRoundedIcon /></a></p>
-                                <p>{mid.twitter === "null" ? "אין" : mid.twitter.split('/').splice(3)} <a href={mid.twitter} rel="noreferrer" target="_blank"><TwitterIcon /></a> </p>
+                                <p> <a href={`mailto:${mid.email}`}>{mid.email === "null" ? "אין" : mid.email}<EmailIcon /></a></p>
+                                <p> <a href={mid.facebook} rel="noreferrer" target="_blank">{mid.facebook.split('/').splice(3)}<FacebookRoundedIcon /></a></p>
+                                <p> <a href={mid.twitter} rel="noreferrer" target="_blank">{mid.twitter === "null" ? "אין" : mid.twitter.split('/').splice(3)}<TwitterIcon /></a> </p>
                             </Col>
                         </Row>
                     </Container>
