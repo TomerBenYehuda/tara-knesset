@@ -3,19 +3,19 @@ import MemberCard from './MemberCard';
 
 
 
-export default function MembersList({ members, searchValue, kentsetFilter }) {
+export default function MembersList({ members, searchValue, knessetFilterValue }) {
 
     let cc = members.filter(members => members.first_name.toLowerCase().includes(searchValue?.toLowerCase()) || members.last_name.toLowerCase().includes(searchValue?.toLowerCase()) || members.party.toLowerCase().includes(searchValue?.toLowerCase()))
-    let kenesst_role = members.filter(members => members.kenesst_role.includes(kentsetFilter))
-    let gov_role = members.filter(members => members.gov_role.includes(kentsetFilter))
-    let party = members.filter(members => members.party.includes(kentsetFilter))
-    let additional_role = members.filter(members => members.additional_role.includes(kentsetFilter))
-    let position = members.filter(members => members.position.includes(kentsetFilter))
+    let kenesst_role = members.filter(members => members.kenesst_role.includes(knessetFilterValue))
+    let gov_role = members.filter(members => knessetFilterValue.includes(members.gov_role))
+    let party = members.filter(members => knessetFilterValue.includes(members.party))
+    let additional_role = members.filter(members => knessetFilterValue.includes(members.additional_role))
+    let position = members.filter(members => members.position.includes(knessetFilterValue))
 
     return (
         <div id='memeberlist'>
             {
-                kentsetFilter == "" ?
+                knessetFilterValue == "" ?
                     <>
                         {searchValue == "" ? members.map(members => <MemberCard key={members.memberID} members={members} />) : cc.map(members => <MemberCard key={members.memberID} members={members} />)}
                     </>
@@ -31,23 +31,6 @@ export default function MembersList({ members, searchValue, kentsetFilter }) {
 
             }
 
-
-
-
-
-            {/* {searchValue !== "" && cc.map(members => <MemberCard key={members.memberID} members={members} />)} */}
-            {/* {kentsetFilter !== "תפקיד בכנסת" && bb.map(members => <MemberCard key={members.memberID} members={members} />)} */}
         </div>
     )
 }
-
-
-
-// members.filter((members) => {
-//     if (searchValue === "" && kentsetFilter === "") {
-//         return members
-//     } else if (members.first_name.toLowerCase().includes(searchValue?.toLowerCase()) || members.last_name.toLowerCase().includes(searchValue?.toLowerCase()) || members.party.toLowerCase().includes(searchValue?.toLowerCase()) || members.kenesst_role.includes(kentsetFilter)) {
-//         return members
-//     }
-
-// }).map(members => <MemberCard key={members.memberID} members={members} />)

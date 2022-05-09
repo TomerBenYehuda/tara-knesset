@@ -13,7 +13,7 @@ export default function Homepage({ members, searchValue }) {
     const [govRole, setGovRole] = useState([])
     const [party, setParty] = useState([])
     const [additionalRole, setAdditionalRole] = useState([])
-    const [kentsetFilter, setKentsetFilter] = useState("")
+    const [knessetFilterValue, setKnessetFilterValue] = useState("")
 
     // Subject Filter //
     const [security, setSecurity] = useState([])
@@ -26,7 +26,7 @@ export default function Homepage({ members, searchValue }) {
     const [education, setEducation] = useState([])
     const [istrue, setIstrue] = useState(false)
     const [showMe, setShowMe] = useState("")
-    
+
 
 
     useEffect(() => {
@@ -42,7 +42,7 @@ export default function Homepage({ members, searchValue }) {
             } else {
                 // console.log(data.knesset_role);
                 setKnessetRole(data.knesset_role)
-                
+
             }
         })();
 
@@ -93,7 +93,7 @@ export default function Homepage({ members, searchValue }) {
 
     }, [])
 
-    
+
 
     const securityFilter = async () => {
         const res = await fetch('https://keneset-api.herokuapp.com/filter/security', {
@@ -234,12 +234,12 @@ export default function Homepage({ members, searchValue }) {
     return (
         <div>
             <FirstPage />
-            <FiltersComp members={members} knessetRole={knessetRole} kentsetFilter={kentsetFilter} setKentsetFilter={setKentsetFilter} govRole={govRole} party={party} additionalRole={additionalRole} setIstrue={setIstrue} />
-            <SubFilter securityFilter={securityFilter} lawpoliceFilter={lawpoliceFilter} foreignaffairsFilter={foreignaffairsFilter} healthwelfareFilter={healthwelfareFilter} environmentFilter={environmentFilter} cultureFilter={cultureFilter} economyFilter={economyFilter} educationFilter={educationFilter}/>
+            <FiltersComp members={members} knessetRole={knessetRole} knessetFilterValue={knessetFilterValue} setKnessetFilterValue={setKnessetFilterValue} govRole={govRole} party={party} additionalRole={additionalRole} setIstrue={setIstrue} />
+            <SubFilter securityFilter={securityFilter} lawpoliceFilter={lawpoliceFilter} foreignaffairsFilter={foreignaffairsFilter} healthwelfareFilter={healthwelfareFilter} environmentFilter={environmentFilter} cultureFilter={cultureFilter} economyFilter={economyFilter} educationFilter={educationFilter} />
             {
-                istrue ? <SubjectMemeberList showMe={showMe} security={security} lawpolice={lawpolice} foreignaffairs={foreignaffairs} healthwelfare={healthwelfare} environment={environment} culture={culture} economy={economy} education={education}/>  : <MembersList members={members} searchValue={searchValue}  kentsetFilter={kentsetFilter}  />
+                istrue ? <SubjectMemeberList showMe={showMe} security={security} lawpolice={lawpolice} foreignaffairs={foreignaffairs} healthwelfare={healthwelfare} environment={environment} culture={culture} economy={economy} education={education} /> : <MembersList members={members} searchValue={searchValue} knessetFilterValue={knessetFilterValue} />
             }
-            <Footer/>
+            <Footer />
         </div>
     )
 }

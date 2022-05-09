@@ -28,7 +28,7 @@ const MenuPropss = {
 
 const position = ['אופוזיציה', "קואליציה"]
 
-export default function FiltersComp({ knessetRole, setKentsetFilter, govRole, party, additionalRole, member,setIstrue}) {
+export default function FiltersComp({ knessetRole, setKnessetFilterValue, govRole, party, additionalRole, setIstrue }) {
 
     const [filtername, setFiltername] = React.useState([]);
     const [filtername2, setFiltername2] = React.useState([]);
@@ -45,9 +45,9 @@ export default function FiltersComp({ knessetRole, setKentsetFilter, govRole, pa
             // On autofill we get a stringified value.
             typeof value === 'string' ? value.split(',') : value,
         );
-        setKentsetFilter(event.target.value);
+        setKnessetFilterValue(event.target.value);
         setIstrue(false)
-       
+
     };
 
     const handleChange2 = (event) => {
@@ -58,7 +58,7 @@ export default function FiltersComp({ knessetRole, setKentsetFilter, govRole, pa
             // On autofill we get a stringified value.
             typeof value === 'string' ? value.split(',') : value,
         );
-        setKentsetFilter(event.target.value);
+        setKnessetFilterValue(event.target.value);
         setIstrue(false)
     };
 
@@ -70,7 +70,7 @@ export default function FiltersComp({ knessetRole, setKentsetFilter, govRole, pa
             // On autofill we get a stringified value.
             typeof value === 'string' ? value.split(',') : value,
         );
-        setKentsetFilter(event.target.value);
+        setKnessetFilterValue(event.target.value);
         setIstrue(false)
     };
 
@@ -82,7 +82,7 @@ export default function FiltersComp({ knessetRole, setKentsetFilter, govRole, pa
             // On autofill we get a stringified value.
             typeof value === 'string' ? value.split(',') : value,
         );
-        setKentsetFilter(event.target.value);
+        setKnessetFilterValue(event.target.value);
         setIstrue(false)
     };
 
@@ -94,7 +94,7 @@ export default function FiltersComp({ knessetRole, setKentsetFilter, govRole, pa
             // On autofill we get a stringified value.
             typeof value === 'string' ? value.split(',') : value,
         );
-        setKentsetFilter(event.target.value);
+        setKnessetFilterValue(event.target.value);
         setIstrue(false)
     };
 
@@ -213,8 +213,8 @@ export default function FiltersComp({ knessetRole, setKentsetFilter, govRole, pa
 
 
 
-// <select value={kentsetFilter} onChange={handlefilter}  >
-//     {console.log(kentsetFilter)}
+// <select value={knessetFilterValue} onChange={handlefilter}  >
+//     {console.log(knessetFilterValue)}
 //     <option value="DEFAULT" > תפקיד בכנסת</option>
 //     {
 //         govRole.map(ket => (
@@ -229,10 +229,10 @@ export default function FiltersComp({ knessetRole, setKentsetFilter, govRole, pa
 
     // const handlefilter = async ({ target }) => {
     //     // filterme()
-    //     setKentsetFilter(target.value);
+    //     setKnessetFilterValue(target.value);
     //     // setPersonName(true)
-    //     console.log(kentsetFilter);
+    //     console.log(knessetFilterValue);
     // }
 
 
-    // onChange={(e) => setKentsetFilter(e.target.value)}
+    // onChange={(e) => setKnessetFilterValue(e.target.value)}
