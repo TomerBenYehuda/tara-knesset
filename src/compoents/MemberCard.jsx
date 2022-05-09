@@ -22,7 +22,6 @@ export default function MemberCard({ members }) {
             if (data.err) {
                 alert(data.err)
             } else {
-                console.log(data);
                 setMembersId(data)
             }
         })()

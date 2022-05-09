@@ -52,12 +52,12 @@ export default function AdminMemberCard({ members }) {
         })
         const data = await res.json()
         if (data.err) {
-            console.log(data.err)
+            alert(data.err)
         } else {
             setUpdate((up) => !up)
             setShow(false)
         }
-
+        alert(data.msg)
         console.log(data);
     }
 

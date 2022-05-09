@@ -1,5 +1,6 @@
 import React from 'react'
 import AdminMember from './AdminMember'
+import { Button } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
 import AdminLogin from './AdminLogin'
 
@@ -34,8 +35,10 @@ export default function Admin({ members, searchValue }) {
           </>
           :
           <>
-            <h1 style={{ paddingTop: 150 }}>Admin Page</h1>
-            <button onClick={logout}>Logout</button>
+            <div style={{ paddingTop: 150, display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center' }}>
+              <h1>Admin Page</h1>
+              <Button variant="primary" onClick={logout}>Logout</Button>
+            </div>
             <AdminMember members={members} searchValue={searchValue} />
           </>
       }
