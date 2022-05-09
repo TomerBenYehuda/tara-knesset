@@ -114,7 +114,7 @@ export default function FiltersComp({ knessetRole, setKnessetFilterValue, govRol
                         MenuProps={MenuProps}
                     >
                         {position.map((position) => (
-                            <MenuItem key={position} value={position}>
+                            <MenuItem className='menuitemselect' key={position} value={position}>
                                 <Checkbox checked={filtername5.indexOf(position) > -1} />
                                 <ListItemText primary={position} />
                             </MenuItem>
@@ -135,7 +135,7 @@ export default function FiltersComp({ knessetRole, setKnessetFilterValue, govRol
                         MenuProps={MenuProps}
                     >
                         {additionalRole.map((additionalRole) => (
-                            <MenuItem key={additionalRole.id} value={additionalRole.additional_role}>
+                            <MenuItem className='menuitemselect' key={additionalRole.id} value={additionalRole.additional_role}>
                                 <Checkbox checked={filtername4.indexOf(additionalRole.additional_role) > -1} />
                                 <ListItemText primary={additionalRole.additional_role} />
                             </MenuItem>
@@ -156,7 +156,7 @@ export default function FiltersComp({ knessetRole, setKnessetFilterValue, govRol
                         MenuProps={MenuPropss}
                     >
                         {party.map((party) => (
-                            <MenuItem key={party.id} value={party.party}>
+                            <MenuItem className='menuitemselect' key={party.id} value={party.party}>
                                 <Checkbox checked={filtername3.indexOf(party.party) > -1} />
                                 <ListItemText primary={party.party} />
                             </MenuItem>
@@ -177,7 +177,7 @@ export default function FiltersComp({ knessetRole, setKnessetFilterValue, govRol
                         MenuProps={MenuProps}
                     >
                         {govRole.map((gov) => (
-                            <MenuItem key={gov.id} value={gov.gov_role}>
+                            <MenuItem className='menuitemselect' key={gov.id} value={gov.gov_role}>
                                 <Checkbox checked={filtername2.indexOf(gov.gov_role) > -1} />
                                 <ListItemText primary={gov.gov_role} />
                             </MenuItem>
@@ -198,7 +198,7 @@ export default function FiltersComp({ knessetRole, setKnessetFilterValue, govRol
                         MenuProps={MenuProps}
                     >
                         {knessetRole.map((ket) => (
-                            <MenuItem key={ket.id} value={ket.knesset_role}>
+                            <MenuItem className='menuitemselect' key={ket.id} value={ket.knesset_role}>
                                 <Checkbox checked={filtername.indexOf(ket.knesset_role) > -1} />
                                 <ListItemText primary={ket.knesset_role} />
                             </MenuItem>

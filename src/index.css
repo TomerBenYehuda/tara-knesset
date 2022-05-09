@@ -350,8 +350,9 @@ code {
   font-weight: 500;
 }
 
-.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root {
+.menuitemselect {
   flex-direction: row-reverse;
+  text-align: right;
 }
 
 
