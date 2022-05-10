@@ -28,7 +28,7 @@ export default function App() {
       } else {
         setMembers(data)
       }
-    },1500)
+    },2500)
 
   }, [update])
 

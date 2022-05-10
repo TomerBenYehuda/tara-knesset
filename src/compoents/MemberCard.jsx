@@ -92,7 +92,7 @@ export default function MemberCard({ members }) {
                                     <p className='smalltitle'>דובר <HelpOutlineOutlinedIcon fontSize='small' /></p>
                                 </OverlayTrigger>
                                 <p className='littletitle'>שם: {mid.speaker_name === "null" ? "אין" : mid.speaker_name}</p>
-                                <p className='littletitle'>טלפון: {mid.speaker_name === "null" ? "אין" : mid.speaker_name}</p>
+                                <p className='littletitle'>טלפון: {mid.speaker_phone === "null" ? "אין" : mid.speaker_phone}</p>
                                 <OverlayTrigger
                                     placement="right"
                                     delay={{ show: 100, hide: 300 }}
