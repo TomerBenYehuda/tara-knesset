@@ -46,8 +46,13 @@ export default function AdminAddMember({ setUpdate }) {
         console.log(data);
     }
 
+    const goBack = () => {
+        navigate('/tara-admin')
+    }
+
     return (
         <div dir="rtl" className='AdminAddMembercon'>
+            <Button className='backbtn' onClick={goBack}>חזרה לעמוד מנהלים</Button>
             <h3>פרטים אישים:</h3>
             <div className='AdminAddMemberinput'>
                 <div>
