@@ -4,7 +4,7 @@ import MemberCard from './MemberCard';
 
 
 
-export default function AdminMember({ members, searchValue}) {
+export default function AdminMember({ members, searchValue, setUpdate}) {
 
     let cc = members.filter(members => members.first_name.toLowerCase().includes(searchValue?.toLowerCase()) || members.last_name.toLowerCase().includes(searchValue?.toLowerCase()) || members.party.toLowerCase().includes(searchValue?.toLowerCase()))
     
@@ -13,8 +13,8 @@ export default function AdminMember({ members, searchValue}) {
         <div id='memeberlist'>
 
             {searchValue == "" 
-            ? members.map(members => <AdminMemberCard key={members.memberID} members={members} />) 
-            : cc.map(members => <AdminMemberCard key={members.memberID} members={members} />)}
+            ? members.map(members => <AdminMemberCard key={members.memberID} members={members} setUpdate={setUpdate} />) 
+            : cc.map(members => <AdminMemberCard key={members.memberID} members={members} setUpdate={setUpdate} />)}
 
         </div>
     )

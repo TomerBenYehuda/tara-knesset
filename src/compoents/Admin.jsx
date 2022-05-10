@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import AdminLogin from './AdminLogin'
 
 
-export default function Admin({ members, searchValue }) {
+export default function Admin({ members, searchValue, setUpdate }) {
 
   const navigate = useNavigate()
 
@@ -35,11 +35,25 @@ export default function Admin({ members, searchValue }) {
           </>
           :
           <>
-            <div style={{ paddingTop: 150, display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center' }}>
-              <h1>Admin Page</h1>
-              <Button variant="primary" onClick={logout}>Logout</Button>
+            <div dir="rtl" style={{ paddingTop: 150, display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+              <div>
+                <h1>😀 שלום רב </h1>
+                <h3>
+                  פה אפשר לעדכן ולהוסיף חבר כנסת
+                </h3>
+                <h4>
+                  - כדי לעדכן חבר כנסת יש ללחוץ על התמונה ולעדכן את השדות הרלוונטים
+                </h4>
+                <h4>
+                  - כדי להוסיף חבר כנסת חדש, יש ללחוץ על הכפתור "הוסף חבר כנסת חדש"
+                </h4>
+              </div>
+              <div style={{ display: 'flex', justifyContent: 'center' }}>
+                <Button style={{ marginLeft: 30 }} variant="primary" >הוסף חבר כנסת חדש</Button>
+                <Button variant="primary" onClick={logout}>Logout</Button>
+              </div>
             </div>
-            <AdminMember members={members} searchValue={searchValue} />
+            <AdminMember members={members} searchValue={searchValue} setUpdate={setUpdate} />
           </>
       }
     </div>

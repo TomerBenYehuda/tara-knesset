@@ -3,10 +3,9 @@ import { Card, Modal, Button, Container, Col, Row } from 'react-bootstrap';
 import TextField from '@mui/material/TextField';
 
 
-export default function AdminMemberCard({ members }) {
+export default function AdminMemberCard({ members, setUpdate }) {
 
     const [membersId, setMembersId] = useState([])
-    const [update, setUpdate] = useState(true)
     const [facebook, setFacebook] = useState(members.facebook);
     const [twitter, setTwitter] = useState(members.twitter);
     const [party, setParty] = useState(members.party);

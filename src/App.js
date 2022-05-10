@@ -8,6 +8,8 @@ export default function App() {
   const [members, setMembers] = useState([])
   const [searchValue, setSearchValue] = useState("")
   const [progress, setProgress] = useState(0)
+  const [update, setUpdate] = useState(true)
+
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -28,13 +30,13 @@ export default function App() {
       }
     },1500)
 
-  }, [])
+  }, [update])
 
   return (
     <div>
       <Router>
         <Headers members={members} setSearchValue={setSearchValue} searchValue={searchValue} />
-        <Main members={members} searchValue={searchValue} progress={progress}/>
+        <Main members={members} searchValue={searchValue} progress={progress} setUpdate={setUpdate}/>
       </Router>
     </div>
   )
