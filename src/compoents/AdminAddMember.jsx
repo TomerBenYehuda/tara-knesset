@@ -52,76 +52,88 @@ export default function AdminAddMember({ setUpdate }) {
 
     return (
         <div dir="rtl" className='AdminAddMembercon'>
-            <Button className='backbtn' onClick={goBack}>חזרה לעמוד מנהלים</Button>
-            <h3>פרטים אישים:</h3>
-            <div className='AdminAddMemberinput'>
-                <div>
-                    <p><u>שם פרטי:</u></p>
-                    <TextField id="outlined-basic" label="שם פרטי" variant="outlined" onChange={(e) => setFirst_name(e.target.value)} />
-                    <p><u>שם משפחה:</u></p>
-                    <TextField id="outlined-basic" label="שם משפחה" variant="outlined" onChange={(e) => setLast_name(e.target.value)} />
-                </div>
-                <div>
-                    <p><u>תמונה:</u></p>
-                    <TextField id="outlined-basic" label="תמונה" variant="outlined" onChange={(e) => setPicture(e.target.value)} />
-                    <p><u>טלפון אישי:</u></p>
-                    <TextField id="outlined-basic" label="טלפון אישי" variant="outlined" onChange={(e) => setPersonal_phone(e.target.value)} />
-                    <p><u>טלפון משרד:</u></p>
-                    <TextField id="outlined-basic" label="טלפון משרד" variant="outlined" onChange={(e) => setOffice_phone(e.target.value)} />
-                </div>
-                <div>
-                    <p><u>אימייל:</u></p>
-                    <TextField id="outlined-basic" label="אימייל" variant="outlined" onChange={(e) => setEmail(e.target.value)} />
-                    <p><u>פייסבוק:</u></p>
-                    <TextField id="outlined-basic" label="פייסבוק" variant="outlined" onChange={(e) => setFacebook(e.target.value)} />
-                    <p><u>טוויטר:</u></p>
-                    <TextField id="outlined-basic" label="טוויטר" variant="outlined" onChange={(e) => setTwitter(e.target.value)} />
-                </div>
-            </div>
-            <h3>פרטים ממשלתיים:</h3>
-            <div className='AdminAddMemberinput'>
-                <div>
-                    <p><u>אופוזיציה\קואליציה:</u></p>
-                    <TextField id="outlined-basic" label="אופוזיציה\קואליציה" variant="outlined" onChange={(e) => setPosition(e.target.value)} />
-                    <p><u>סיעה:</u></p>
-                    <TextField id="outlined-basic" label="סיעה" variant="outlined" onChange={(e) => setParty(e.target.value)} />
-                </div>
-                <div>
-                    <p><u>תפקיד בממשלה:</u></p>
-                    <TextField id="outlined-basic" label="תפקיד בממשלה" variant="outlined" onChange={(e) => setGov_role(e.target.value)} />
-                    <p><u>תפקיד בכנסת:</u></p>
-                    <TextField id="outlined-basic" label="תפקיד בכנסת" variant="outlined" onChange={(e) => setKenesst_role(e.target.value)} />
-                </div>
-                <div>
-                    <p><u>תפקיד נוסף:</u></p>
-                    <TextField id="outlined-basic" label="תפקיד נוסף" variant="outlined" onChange={(e) => setAdditional_role(e.target.value)} />
-                </div>
-            </div>
-            <h3>פרטים נלווים:</h3>
-            <div className='AdminAddMemberinput'>
-                <div>
-                    <p><u>שם של הדובר:</u></p>
-                    <TextField id="outlined-basic" label="שם של הדובר" variant="outlined" onChange={(e) => setSpeaker_name(e.target.value)} />
-                    <p><u>טלפון של הדובר:</u></p>
-                    <TextField id="outlined-basic" label="טלפון של הדובר" variant="outlined" onChange={(e) => setSpeaker_phone(e.target.value)} />
-                </div>
-                <div>
-                    <p><u>שם של ראש מטה:</u></p>
-                    <TextField id="outlined-basic" label="שם של ראש מטה" variant="outlined" onChange={(e) => setHead_office_name(e.target.value)} />
-                    <p><u>טלפון של ראש מטה:</u></p>
-                    <TextField id="outlined-basic" label="טלפון של ראש מטה" variant="outlined" onChange={(e) => setHead_office_phone(e.target.value)} />
-                </div>
-                <div>
-                    <p><u>שם של יועץ פוליטי:</u></p>
-                    <TextField id="outlined-basic" label="שם של יועץ פוליטי" variant="outlined" onChange={(e) => setPolitical_consultant_name(e.target.value)} />
-                    <p><u>טלפון של יועץ פוליטי:</u></p>
-                    <TextField id="outlined-basic" label="טלפון של יועץ פוליטי" variant="outlined" onChange={(e) => setPolitical_consultant_phone(e.target.value)} />
-                </div>
-            </div>
+            {
+                !localStorage.name ?
+                    <>
+                        <AdminLogin />
+                    </>
+                    :
+                    <>
+                        <Button className='backbtn' onClick={goBack}>חזרה לעמוד מנהלים</Button>
+                        <h3>פרטים אישים:</h3>
+                        <div className='AdminAddMemberinput'>
+                            <div>
+                                <p><u>שם פרטי:</u></p>
+                                <TextField id="outlined-basic" label="שם פרטי" variant="outlined" onChange={(e) => setFirst_name(e.target.value)} />
+                                <p><u>שם משפחה:</u></p>
+                                <TextField id="outlined-basic" label="שם משפחה" variant="outlined" onChange={(e) => setLast_name(e.target.value)} />
+                            </div>
+                            <div>
+                                <p><u>תמונה:</u></p>
+                                <TextField id="outlined-basic" label="תמונה" variant="outlined" onChange={(e) => setPicture(e.target.value)} />
+                                <p><u>טלפון אישי:</u></p>
+                                <TextField id="outlined-basic" label="טלפון אישי" variant="outlined" onChange={(e) => setPersonal_phone(e.target.value)} />
+                                <p><u>טלפון משרד:</u></p>
+                                <TextField id="outlined-basic" label="טלפון משרד" variant="outlined" onChange={(e) => setOffice_phone(e.target.value)} />
+                            </div>
+                            <div>
+                                <p><u>אימייל:</u></p>
+                                <TextField id="outlined-basic" label="אימייל" variant="outlined" onChange={(e) => setEmail(e.target.value)} />
+                                <p><u>פייסבוק:</u></p>
+                                <TextField id="outlined-basic" label="פייסבוק" variant="outlined" onChange={(e) => setFacebook(e.target.value)} />
+                                <p><u>טוויטר:</u></p>
+                                <TextField id="outlined-basic" label="טוויטר" variant="outlined" onChange={(e) => setTwitter(e.target.value)} />
+                            </div>
+                        </div>
+                        <h3>פרטים ממשלתיים:</h3>
+                        <div className='AdminAddMemberinput'>
+                            <div>
+                                <p><u>אופוזיציה\קואליציה:</u></p>
+                                <TextField id="outlined-basic" label="אופוזיציה\קואליציה" variant="outlined" onChange={(e) => setPosition(e.target.value)} />
+                                <p><u>סיעה:</u></p>
+                                <TextField id="outlined-basic" label="סיעה" variant="outlined" onChange={(e) => setParty(e.target.value)} />
+                            </div>
+                            <div>
+                                <p><u>תפקיד בממשלה:</u></p>
+                                <TextField id="outlined-basic" label="תפקיד בממשלה" variant="outlined" onChange={(e) => setGov_role(e.target.value)} />
+                                <p><u>תפקיד בכנסת:</u></p>
+                                <TextField id="outlined-basic" label="תפקיד בכנסת" variant="outlined" onChange={(e) => setKenesst_role(e.target.value)} />
+                            </div>
+                            <div>
+                                <p><u>תפקיד נוסף:</u></p>
+                                <TextField id="outlined-basic" label="תפקיד נוסף" variant="outlined" onChange={(e) => setAdditional_role(e.target.value)} />
+                            </div>
+                        </div>
+                        <h3>פרטים נלווים:</h3>
+                        <div className='AdminAddMemberinput'>
+                            <div>
+                                <p><u>שם של הדובר:</u></p>
+                                <TextField id="outlined-basic" label="שם של הדובר" variant="outlined" onChange={(e) => setSpeaker_name(e.target.value)} />
+                                <p><u>טלפון של הדובר:</u></p>
+                                <TextField id="outlined-basic" label="טלפון של הדובר" variant="outlined" onChange={(e) => setSpeaker_phone(e.target.value)} />
+                            </div>
+                            <div>
+                                <p><u>שם של ראש מטה:</u></p>
+                                <TextField id="outlined-basic" label="שם של ראש מטה" variant="outlined" onChange={(e) => setHead_office_name(e.target.value)} />
+                                <p><u>טלפון של ראש מטה:</u></p>
+                                <TextField id="outlined-basic" label="טלפון של ראש מטה" variant="outlined" onChange={(e) => setHead_office_phone(e.target.value)} />
+                            </div>
+                            <div>
+                                <p><u>שם של יועץ פוליטי:</u></p>
+                                <TextField id="outlined-basic" label="שם של יועץ פוליטי" variant="outlined" onChange={(e) => setPolitical_consultant_name(e.target.value)} />
+                                <p><u>טלפון של יועץ פוליטי:</u></p>
+                                <TextField id="outlined-basic" label="טלפון של יועץ פוליטי" variant="outlined" onChange={(e) => setPolitical_consultant_phone(e.target.value)} />
+                            </div>
+                        </div>
 
-            <div className='addnewmemberbtn'>
-                <Button variant="primary" onClick={addNewMember}>הוסף חבר כנסת חדש</Button>
-            </div>
+                        <div className='addnewmemberbtn'>
+                            <Button variant="primary" onClick={addNewMember}>הוסף חבר כנסת חדש</Button>
+                        </div>
+                    </>
+            }
+
+
+
 
 
         </div>
