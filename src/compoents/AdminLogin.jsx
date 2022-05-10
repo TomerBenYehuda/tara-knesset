@@ -54,7 +54,7 @@ export default function AdminLogin() {
 
                     </CardContent>
 
-                    <CardActions>
+                    <CardActions className='loginbtn'>
                         <Button onClick={handleClcik} size="small">Login</Button>
                     </CardActions>
                 </Card>

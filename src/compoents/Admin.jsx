@@ -35,7 +35,7 @@ export default function Admin({ members, searchValue, setUpdate }) {
           </>
           :
           <>
-            <div dir="rtl" style={{ paddingTop: 150, display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
+            <div className='infoforadmin' dir="rtl" >
               <div>
                 <h1>😀 שלום רב </h1>
                 <h3>
@@ -48,8 +48,8 @@ export default function Admin({ members, searchValue, setUpdate }) {
                   - כדי להוסיף חבר כנסת חדש, יש ללחוץ על הכפתור "הוסף חבר כנסת חדש"
                 </h4>
               </div>
-              <div style={{ display: 'flex', justifyContent: 'center' }}>
-                <Button style={{ marginLeft: 30 }} variant="primary" >הוסף חבר כנסת חדש</Button>
+              <div className='btnadmindiv'>
+                <Button className='addnewuserbtn' variant="primary" >הוסף חבר כנסת חדש</Button>
                 <Button variant="primary" onClick={logout}>Logout</Button>
               </div>
             </div>

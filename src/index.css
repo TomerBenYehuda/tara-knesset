@@ -177,7 +177,7 @@ code {
   height: 234px;
   border: 8px solid #749BB3;
   border-radius: 85px;
-  
+
 }
 
 .rowfirst {
@@ -233,7 +233,7 @@ code {
   margin-top: 40px;
 }
 
-.infowork{
+.infowork {
   margin-top: -10px;
 }
 
@@ -384,7 +384,7 @@ code {
   margin-bottom: 15px;
   margin-left: 100px;
   margin-right: 100px;
-  
+
 }
 
 .searchsubject {
@@ -414,7 +414,7 @@ code {
   align-items: center;
 }
 
-.firstline{
+.firstline {
   margin-bottom: 20px;
 }
 
@@ -424,7 +424,7 @@ code {
   color: white;
 }
 
-.filterimagecontainer > img {
+.filterimagecontainer>img {
   background: rgba(82, 118, 164, 0.973);
   border-radius: 20px;
 }
@@ -444,7 +444,7 @@ code {
 .footercomp {
   background-color: #184885;
   height: 205px;
-  
+
 }
 
 .footersection {
@@ -475,12 +475,12 @@ code {
 
 hr {
   color: white;
-  width:80%;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
 }
 
-.rights{
+.rights {
   color: white;
   text-align: center;
 }
@@ -524,7 +524,7 @@ hr {
   margin-bottom: 4px;
 }
 
-.login{
+.login {
   display: flex;
   justify-content: center;
   padding-top: 150px;
@@ -532,15 +532,59 @@ hr {
 }
 
 
-.MuiFormGroup-root{
+.MuiFormGroup-root {
   justify-content: center
 }
 
-#err{
+#err {
   margin-top: 5px;
   color: red;
 }
 
-.css-1t6e9jv-MuiCardActions-root{
+.loginbtn {
   justify-content: center;
+}
+
+.infoforadmin {
+  padding-top: 150px;
+  display: 'flex';
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.btnadmindiv {
+  margin-top: 15px;
+  display: 'flex';
+  justify-content: center;
+}
+
+.addnewuserbtn {
+  margin-left: 30px;
+}
+
+.AdminAddMembercon {
+  padding-top: 150px;
+  /* display: flex;
+  justify-content: space-evenly; */
+}
+
+.AdminAddMembercon>h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+
+.AdminAddMemberinput {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 40px;
+}
+
+.addnewmemberbtn {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 40px;
 }
