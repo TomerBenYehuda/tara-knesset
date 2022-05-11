@@ -50,6 +50,39 @@ code {
   left: 50%;
 }
 
+/* Media screen firstpage */
+
+@media screen and (max-width: 600px) {
+  .centertext {
+    font-size: 30px;
+    width: 300px;
+    display: flex;
+    padding-top: 300px;
+    top: 0;
+    left: 0;
+    right: 0px;
+    bottom: 0px;
+    transform: translate(0, 0);
+    margin-right: 50px;
+    margin-left: 50px;
+    text-align: center;
+  }
+
+  .kenestimg{
+    height: 700px;
+    width: 100vw;
+  }
+
+  .icondown{
+    top: 70%;
+    left: 165px;
+    right: 165px;
+  }
+
+}
+
+
+/* ///////////////END/////////////////// */
 /* ////////// End first page/// */
 
 /* /////// Memeber List and Memeber Card Comp/////////////// */
