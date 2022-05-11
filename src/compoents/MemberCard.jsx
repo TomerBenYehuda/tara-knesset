@@ -63,7 +63,6 @@ export default function MemberCard({ members }) {
                     <Card.Title dir="rtl">{members.first_name} {members.last_name}</Card.Title>
                     <Card.Text>
                         {members.gov_role === "null" ? " " : members.gov_role.split(',', 1).splice(0)}
-                        {/* {members.gov_role} */}
                     </Card.Text>
                 </Card.Body>
             </Card>
@@ -75,24 +74,24 @@ export default function MemberCard({ members }) {
                 <Modal.Body className="show-grid">
                     <Container>
                         <Row>
-                            <Col xs={4}></Col>
-                            <Col xs={5}>
-                                <h1 className='title'>חבר כנסת</h1>
+                            <Col xs={3}></Col>
+                            <Col xs={6}>
+                                <h1 className='title'>{mid.first_name} {mid.last_name}</h1>
                                 <p className='secondline'>{mid.party} , {mid.position} <PhoneEnabledIcon /> </p>
                             </Col>
-                            <Col xs={4}></Col>
+                            <Col xs={3}></Col>
                         </Row>
                         <Row className='rowfirst'>
                             <Col xs={4} className='infowork'>
                                 <OverlayTrigger
                                     placement="right"
                                     delay={{ show: 100, hide: 300 }}
-                                    overlay={doverTooltip}
+                                    overlay={headTooltipp}
                                 >
-                                    <p className='smalltitle'>דובר <HelpOutlineOutlinedIcon fontSize='small' /></p>
+                                    <p className='smalltitle'>ראש מטה <HelpOutlineOutlinedIcon fontSize='small' /></p>
                                 </OverlayTrigger>
-                                <p className='littletitle'>שם: {mid.speaker_name === "null" ? "אין" : mid.speaker_name}</p>
-                                <p className='littletitle'>טלפון: {mid.speaker_phone === "null" ? "אין" : mid.speaker_phone}</p>
+                                <p className='littletitle'>שם: {mid.head_office_name === "null" ? "אין" : mid.head_office_name}</p>
+                                <p className='littletitle'>טלפון: {mid.head_office_phone === "null" ? "אין" : mid.head_office_phone}</p>
                                 <OverlayTrigger
                                     placement="right"
                                     delay={{ show: 100, hide: 300 }}
@@ -105,20 +104,19 @@ export default function MemberCard({ members }) {
                                 <OverlayTrigger
                                     placement="right"
                                     delay={{ show: 100, hide: 300 }}
-                                    overlay={headTooltipp}
+                                    overlay={doverTooltip}
                                 >
-                                    <p className='smalltitle'>ראש מטה <HelpOutlineOutlinedIcon fontSize='small' /></p>
+                                    <p className='smalltitle'>דובר <HelpOutlineOutlinedIcon fontSize='small' /></p>
                                 </OverlayTrigger>
-                                <p className='littletitle'>שם: {mid.head_office_name === "null" ? "אין" : mid.head_office_name}</p>
-                                <p className='littletitle'>טלפון: {mid.head_office_phone === "null" ? "אין" : mid.head_office_phone}</p>
+                                <p className='littletitle'>שם: {mid.speaker_name === "null" ? "אין" : mid.speaker_name}</p>
+                                <p className='littletitle'>טלפון: {mid.speaker_phone === "null" ? "אין" : mid.speaker_phone}</p>
                             </Col>
                             <Col xs={5} className='infowork'>
-                                <p className='smalltitle'>תפקיד בממשלה: {mid.gov_role === "null" ? "אין" : mid.gov_role}</p>
+                                <p className='smalltitle'><b>תפקיד בממשלה: </b> {mid.gov_role === "null" ? "אין" : mid.gov_role}</p>
                                 <p className='littletitle'>סיעה: {mid.party}</p>
-                                <p className='smalltitle'>תפקיד בכנסת</p>
-                                <p className='littletitle'>{mid.kenesst_role === "null" ? "אין" : mid.kenesst_role}</p>
+                                <p className='littletitle'><b>תפקיד בכנסת: </b>{mid.kenesst_role === "null" ? "אין" : mid.kenesst_role}</p>
                                 <p className='smalltitle'>{mid.position}</p>
-                                <p className='littletitle'>{mid.additional_role === "null" ? "" : mid.additional_role}</p>
+                                <p className='littletitle'><b>תפקיד נוסף: </b> {mid.additional_role === "null" ? "אין" : mid.additional_role}</p>
                             </Col>
                             <Col xs={3} className='infomemebr'>
                                 <p dir="rtl"><a href={`https://wa.me/972${mid.personal_phone.replace(/-/, "")}`}><WhatsappTwoToneIcon /></a> {mid.first_name} {mid.last_name} </p>

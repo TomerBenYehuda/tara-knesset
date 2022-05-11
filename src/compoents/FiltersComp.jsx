@@ -102,7 +102,7 @@ export default function FiltersComp({ knessetRole, setKnessetFilterValue, govRol
         <div className='filterContainer'>
             <div className="filters">
                 <FormControl sx={{ m: 1, width: 150 }}>
-                    <InputLabel id="demo-multiple-checkbox-label">קואליציה\אופזיציה</InputLabel>
+                    <InputLabel id="demo-multiple-checkbox-label">קואליציה\אופוזיציה</InputLabel>
                     <Select
                         labelId="demo-multiple-checkbox-label"
                         id="demo-multiple-checkbox"

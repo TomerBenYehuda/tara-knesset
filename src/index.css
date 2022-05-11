@@ -193,7 +193,7 @@ code {
   font-family: 'Heebo';
   font-style: normal;
   font-weight: 900;
-  font-size: 72px;
+  font-size: 65px;
   color: #184885;
 }
 
@@ -230,7 +230,7 @@ code {
   font-size: 18px;
   line-height: 162%;
   color: #184885;
-  margin-top: 40px;
+  margin-top: 55px;
 }
 
 .infowork {
@@ -395,7 +395,7 @@ code {
   font-size: 22px;
   border-radius: 4px;
   padding: 28px;
-
+  cursor: pointer;
 }
 
 .imageandtext {
@@ -422,6 +422,7 @@ code {
   position: relative;
   text-align: right;
   color: white;
+  cursor: pointer;
 }
 
 .filterimagecontainer>img {
