@@ -74,12 +74,12 @@ export default function MemberCard({ members }) {
                 <Modal.Body className="show-grid">
                     <Container>
                         <Row>
-                            <Col xs={3}></Col>
-                            <Col xs={6}>
+                            <Col xs={2}></Col>
+                            <Col xs={7}>
                                 <h1 className='title'>{mid.first_name} {mid.last_name}</h1>
                                 <p className='secondline'>{mid.party} , {mid.position} <PhoneEnabledIcon /> </p>
                             </Col>
-                            <Col xs={3}></Col>
+                            <Col xs={2}></Col>
                         </Row>
                         <Row className='rowfirst'>
                             <Col xs={4} className='infowork'>
