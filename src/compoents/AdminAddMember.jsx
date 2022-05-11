@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Button, Container, Col, Row } from 'react-bootstrap';
 import TextField from '@mui/material/TextField';
 import { useNavigate } from 'react-router-dom';
+import AdminLogin from './AdminLogin';
 
 export default function AdminAddMember({ setUpdate }) {
     const navigate = useNavigate()
