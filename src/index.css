@@ -14,6 +14,132 @@ code {
   font-family: 'Heebo', sans-serif;
 }
 
+
+/* //////////////////////////////////Header Comp//////////////////////////////// */
+
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  background-color: #184885;
+  height: 90px;
+  color: #DDF1FD;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+
+.form-control {
+  width: 600px;
+  border-radius: 40px;
+  text-align: right;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.formobileonly {
+  display: none;
+}
+
+.logo>h5 {
+  margin-left: 30px;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+
+.logojo {
+  width: 30px;
+  height: 44px;
+  margin-left: 30px;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+.logotara {
+  width: 150px;
+  margin-left: 30px;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+
+/* Media Screen Header */
+@media screen and (max-width: 600px) {
+  
+  .form-control {
+    width: 250px;
+    border-radius: 40px;
+  }
+
+  .formobileonly {
+    display: block;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .MuiDrawer-paper {
+    padding-top: 40px;
+    text-align: right;
+    align-items: flex-end;
+  }
+
+  .MuiDrawer-paper>h5 {
+    margin-right: 20px;
+    margin-top: 33px;
+    margin-bottom: 33px;
+  }
+
+  .logojo {
+    width: 30px;
+    height: 44px;
+    margin-top: 10px;
+    margin-right: 20px;
+  }
+
+  .logotara {
+    width: 120px;
+    margin-right: 20px;
+    margin-top: 33px;
+  }
+
+}
+
+
+@media screen and (min-width: 426px) {
+  .header {
+    flex-direction: column-reverse;
+  }
+
+  .form-control {
+    width: 400px;
+    border-radius: 40px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .header {
+    flex-direction: row;
+
+  }
+
+  .form-control {
+    width: 600px;
+    border-radius: 40px;
+  }
+}
+
+
+
+
+/* //////////////////////END Header////////////////////////// */
+
 /* ///////////////// First Page Compo////////////// */
 
 .kenestimg {
@@ -68,12 +194,12 @@ code {
     text-align: center;
   }
 
-  .kenestimg{
+  .kenestimg {
     height: 700px;
-    width: 100vw;
+    width: 102vw;
   }
 
-  .icondown{
+  .icondown {
     top: 70%;
     left: 165px;
     right: 165px;
@@ -272,106 +398,7 @@ code {
 
 /* /////////////////////////////// End of Memeber //////////////// */
 
-/* //////////////////////////////////Header Comp//////////////////////////////// */
 
-.header {
-  position: fixed;
-  width: 100%;
-  z-index: 10;
-  background-color: #184885;
-  height: 90px;
-  color: #DDF1FD;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.navbar-light .navbar-nav .nav-link {
-  font-family: 'Heebo';
-  font-style: medium;
-  font-weight: 500;
-  font-size: 18px;
-  text-align: center;
-  color: #EEF8FE;
-
-}
-
-.navbar-light .navbar-brand {
-  color: #EEF8FE;
-}
-
-#basic-navbar-nav>.d-flex {
-  margin-right: 10px;
-}
-
-.form-control {
-  width: 600px;
-  border-radius: 40px;
-  text-align: right;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-}
-
-
-.logo>h5 {
-  margin-left: 30px;
-  margin-bottom: 0;
-  cursor: pointer;
-}
-
-
-.logojo {
-  width: 30px;
-  height: 44px;
-  margin-left: 30px;
-  margin-bottom: 0;
-  cursor: pointer;
-}
-
-.logotara {
-  width: 150px;
-  margin-left: 30px;
-  margin-bottom: 0;
-  cursor: pointer;
-}
-
-/* Media Screen Header */
-@media screen and (max-width: 425px) {
-  .header {
-    flex-direction: column-reverse;
-  }
-
-  .form-control {
-    width: 250px;
-    border-radius: 40px;
-  }
-}
-
-@media screen and (min-width: 426px) {
-  .header {
-    flex-direction: column-reverse;
-  }
-
-  .form-control {
-    width: 400px;
-    border-radius: 40px;
-  }
-}
-
-@media screen and (min-width: 800px) {
-  .header {
-    flex-direction: row;
-
-  }
-
-  .form-control {
-    width: 600px;
-    border-radius: 40px;
-  }
-}
 
 
 
@@ -623,7 +650,7 @@ hr {
   margin-bottom: 40px;
 }
 
-.backbtn{
+.backbtn {
   margin-right: 80px;
   margin-bottom: 20px;
 }
