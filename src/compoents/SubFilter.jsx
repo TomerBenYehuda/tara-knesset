@@ -53,7 +53,7 @@ export default function SubFilter({ securityFilter, lawpoliceFilter, foreignaffa
                 :חיפוש לפי נושא {!show ? <AddIcon /> : <RemoveIcon />}
             </div>
 
-            <div className='imageandtext' style={{ display: show ? "block" : "none" }} >
+            <div className='imageandtext' style={{ display: show ? "inline" : "none" }} >
                 <div className='firstline'>
 
 
