@@ -119,7 +119,7 @@ export default function MemberCard({ members }) {
                                 <p className='littletitle'><b>תפקיד נוסף: </b> {mid.additional_role === "null" ? "אין" : mid.additional_role}</p>
                             </Col>
                             <Col xs={3} className='infomemebr'>
-                                <p dir="rtl"><a href={`https://wa.me/972${mid.personal_phone.replace(/-/, "")}`}><WhatsappTwoToneIcon /></a> {mid.first_name} {mid.last_name} </p>
+                                <p dir="rtl"><a href={`https://wa.me/972${mid.personal_phone.replace(/-/, "")}`}><WhatsappTwoToneIcon /></a> {mid.personal_phone} </p>
                                 <p> <a href={`mailto:${mid.email}`}>{mid.email === "null" ? "אין" : mid.email}<EmailIcon /></a></p>
                                 <p> <a href={mid.facebook} rel="noreferrer" target="_blank">{mid.facebook.split('/').splice(3)}<FacebookRoundedIcon /></a></p>
                                 <p> <a href={mid.twitter} rel="noreferrer" target="_blank">{mid.twitter === "null" ? "אין" : mid.twitter.split('/').splice(3)}<TwitterIcon /></a> </p>
