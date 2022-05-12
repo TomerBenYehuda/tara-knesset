@@ -70,7 +70,7 @@ code {
 
 /* Media Screen Header */
 @media screen and (max-width: 600px) {
-  
+
   .form-control {
     width: 250px;
     border-radius: 40px;
@@ -392,6 +392,83 @@ code {
   margin-top: -10px;
 }
 
+@media screen and (max-width: 600px) {
+
+  #memeberlist {
+    margin-bottom: 15px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .card-title {
+    font-size: 25px;
+  }
+
+  .card-text {
+    font-size: 20px;
+  }
+
+  /* Modal */
+
+  .modal-content {
+    height: 570px;
+  }
+
+  .modal-header {
+    padding-bottom: 10px;
+    padding-right: 16px;
+    padding-left: 10px;
+    padding-top: 10px;
+  }
+
+  .imgmember {
+    position: unset;
+    width: 71px;
+    height: 75px;
+    border: 2px solid #749BB3;
+    border-radius: 26px;
+  }
+
+  .col-7 {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+  }
+
+  .row>* {
+    width: none;
+    padding-right: 0;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .secondline {
+    font-size: 15px;
+  }
+
+  .rowfirst {
+    margin-top: 5px;
+  }
+
+  .smalltitle {
+    font-size: 15px;
+  }
+
+  .littletitle {
+    font-size: 15px;
+  }
+
+  .infomemebr {
+    font-size: 15px;
+    margin-top: 0px;
+    padding-left: 5px;
+    padding-right: 0px;
+  }
+}
+
 /* /////////////////////////////// End of Memeber //////////////// */
 
 
@@ -440,7 +517,7 @@ code {
     align-items: center;
   }
 
-  .filters > .MuiFormControl-root {
+  .filters>.MuiFormControl-root {
     width: 210px;
   }
 

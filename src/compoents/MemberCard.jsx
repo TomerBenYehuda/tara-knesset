@@ -77,7 +77,7 @@ export default function MemberCard({ members }) {
                             <Col xs={2}></Col>
                             <Col xs={7}>
                                 <h1 className='title'>{mid.first_name} {mid.last_name}</h1>
-                                <p className='secondline'>{mid.party} , {mid.position} <PhoneEnabledIcon /> </p>
+                                <p className='secondline'>{mid.party} , {mid.position}</p>
                             </Col>
                             <Col xs={2}></Col>
                         </Row>
