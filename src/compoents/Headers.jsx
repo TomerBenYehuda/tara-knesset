@@ -67,9 +67,9 @@ export default function Headers({ searchValue, setSearchValue }) {
               anchor={"right"}
               open={state}
               onClose={toggleDrawer(false)}
-            >
+            > 
               <img className='logojo' src="https://i.ibb.co/9TLp7sj/logo-1.png" alt="logo" onClick={() => goTo("")} />
-              <img className='logotara' src="https://i.ibb.co/KcZgHKm/1.png" alt="logo" onClick={() => goTo("")} />
+              <img className='logotara' src="https://i.ibb.co/KcZgHKm/1.png" alt="logo-tara" onClick={() => goTo("")} />
               <h5 onClick={() => goTo("contactus")}>צור קשר</h5>
             </Drawer>
           </ThemeProvider>
