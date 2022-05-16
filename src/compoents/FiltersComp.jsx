@@ -122,26 +122,6 @@ export default function FiltersComp({ knessetRole, setKnessetFilterValue, govRol
                     </Select>
                 </FormControl>
 
-                <FormControl sx={{ m: 1, width: 150 }}>
-                    <InputLabel id="demo-multiple-checkbox-label">תפקיד בסיעה</InputLabel>
-                    <Select
-                        labelId="demo-multiple-checkbox-label"
-                        id="demo-multiple-checkbox"
-                        multiple
-                        value={filtername4}
-                        onChange={handleChange4}
-                        input={<OutlinedInput label="תפקיד בסיעה" />}
-                        renderValue={(selected) => selected.join(', ')}
-                        MenuProps={MenuProps}
-                    >
-                        {additionalRole.map((additionalRole) => (
-                            <MenuItem className='menuitemselect' key={additionalRole.id} value={additionalRole.additional_role}>
-                                <Checkbox checked={filtername4.indexOf(additionalRole.additional_role) > -1} />
-                                <ListItemText primary={additionalRole.additional_role} />
-                            </MenuItem>
-                        ))}
-                    </Select>
-                </FormControl>
 
                 <FormControl sx={{ m: 1, width: 150 }}>
                     <InputLabel id="demo-multiple-checkbox-label">סיעה</InputLabel>
@@ -159,6 +139,27 @@ export default function FiltersComp({ knessetRole, setKnessetFilterValue, govRol
                             <MenuItem className='menuitemselect' key={party.id} value={party.party}>
                                 <Checkbox checked={filtername3.indexOf(party.party) > -1} />
                                 <ListItemText primary={party.party} />
+                            </MenuItem>
+                        ))}
+                    </Select>
+                </FormControl>
+
+                <FormControl sx={{ m: 1, width: 150 }}>
+                    <InputLabel id="demo-multiple-checkbox-label">תפקיד נוסף</InputLabel>
+                    <Select
+                        labelId="demo-multiple-checkbox-label"
+                        id="demo-multiple-checkbox"
+                        multiple
+                        value={filtername4}
+                        onChange={handleChange4}
+                        input={<OutlinedInput label="תפקיד נוסף" />}
+                        renderValue={(selected) => selected.join(', ')}
+                        MenuProps={MenuProps}
+                    >
+                        {additionalRole.map((additionalRole) => (
+                            <MenuItem className='menuitemselect' key={additionalRole.id} value={additionalRole.additional_role}>
+                                <Checkbox checked={filtername4.indexOf(additionalRole.additional_role) > -1} />
+                                <ListItemText primary={additionalRole.additional_role} />
                             </MenuItem>
                         ))}
                     </Select>
@@ -186,14 +187,14 @@ export default function FiltersComp({ knessetRole, setKnessetFilterValue, govRol
                 </FormControl>
 
                 <FormControl sx={{ m: 1, width: 150 }}>
-                    <InputLabel id="demo-multiple-checkbox-label">תפקיד בכנסת</InputLabel>
+                    <InputLabel id="demo-multiple-checkbox-label">תפקיד בכנסת/חבר.ת בוועדה</InputLabel>
                     <Select
                         labelId="demo-multiple-checkbox-label"
                         id="demo-multiple-checkbox"
                         multiple
                         value={filtername}
                         onChange={handleChange}
-                        input={<OutlinedInput label="תפקיד בכנסת" />}
+                        input={<OutlinedInput label="תפקיד בכנסת/חבר.ת בוועדה" />}
                         renderValue={(selected) => selected.join(', ')}
                         MenuProps={MenuProps}
                     >
