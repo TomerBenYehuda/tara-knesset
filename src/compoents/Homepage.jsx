@@ -7,7 +7,7 @@ import MembersList from './MembersList';
 import SubFilter from './SubFilter';
 import SubjectMemeberList from './SubjectMemeberList';
 
-export default function Homepage({ members, searchValue,progress }) {
+export default function Homepage({ members, searchValue,loding }) {
 
     const [knessetRole, setKnessetRole] = useState([])
     const [govRole, setGovRole] = useState([])
@@ -237,7 +237,7 @@ export default function Homepage({ members, searchValue,progress }) {
             <FiltersComp members={members} knessetRole={knessetRole} knessetFilterValue={knessetFilterValue} setKnessetFilterValue={setKnessetFilterValue} govRole={govRole} party={party} additionalRole={additionalRole} setIstrue={setIstrue} />
             <SubFilter securityFilter={securityFilter} lawpoliceFilter={lawpoliceFilter} foreignaffairsFilter={foreignaffairsFilter} healthwelfareFilter={healthwelfareFilter} environmentFilter={environmentFilter} cultureFilter={cultureFilter} economyFilter={economyFilter} educationFilter={educationFilter} />
             {
-                istrue ? <SubjectMemeberList showMe={showMe} security={security} lawpolice={lawpolice} foreignaffairs={foreignaffairs} healthwelfare={healthwelfare} environment={environment} culture={culture} economy={economy} education={education} /> : <MembersList members={members} searchValue={searchValue} knessetFilterValue={knessetFilterValue} progress={progress}/>
+                istrue ? <SubjectMemeberList showMe={showMe} security={security} lawpolice={lawpolice} foreignaffairs={foreignaffairs} healthwelfare={healthwelfare} environment={environment} culture={culture} economy={economy} education={education} /> : <MembersList members={members} searchValue={searchValue} knessetFilterValue={knessetFilterValue} loding={loding}/>
             }
             <Footer />
         </div>

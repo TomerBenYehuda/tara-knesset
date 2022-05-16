@@ -7,15 +7,12 @@ export default function App() {
 
   const [members, setMembers] = useState([])
   const [searchValue, setSearchValue] = useState("")
-  const [progress, setProgress] = useState(0)
   const [update, setUpdate] = useState(true)
+  const [loding, setLoding] = useState(false)
 
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setProgress((prevProgress) => (prevProgress == 100 ? clearInterval(timer) : prevProgress + 50));
-    }, 600);
-
+    
     setTimeout(async () => {
       const res = await fetch('https://keneset-api.herokuapp.com/members', {
         method: 'GET',
@@ -27,8 +24,9 @@ export default function App() {
         alert(data.err)
       } else {
         setMembers(data)
+        setLoding(true)
       }
-    },2500)
+    },100)
 
   }, [update])
 
@@ -36,7 +34,7 @@ export default function App() {
     <div>
       <Router>
         <Headers members={members} setSearchValue={setSearchValue} searchValue={searchValue} />
-        <Main members={members} searchValue={searchValue} progress={progress} setUpdate={setUpdate}/>
+        <Main members={members} searchValue={searchValue} loding={loding} setUpdate={setUpdate}/>
       </Router>
     </div>
   )
