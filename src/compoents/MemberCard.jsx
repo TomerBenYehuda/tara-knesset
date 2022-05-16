@@ -6,6 +6,8 @@ import EmailIcon from '@mui/icons-material/Email';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import WhatsappTwoToneIcon from '@mui/icons-material/WhatsappTwoTone';
 import HelpOutlineOutlinedIcon from '@mui/icons-material/HelpOutlineOutlined';
+import { isMobileOnly } from 'react-device-detect';
+
 
 export default function MemberCard({ members }) {
 
@@ -83,13 +85,31 @@ export default function MemberCard({ members }) {
                         </Row>
                         <Row className='rowfirst'>
                             <Col xs={4} className='infowork'>
-                                <OverlayTrigger
+                                {
+                                    isMobileOnly ?
+                                        <OverlayTrigger
+                                            placement="left"
+                                            delay={{ show: 100, hide: 300 }}
+                                            overlay={headTooltipp}
+                                        >
+                                            <p className='smalltitle'>ראש מטה <HelpOutlineOutlinedIcon fontSize='small' /></p>
+                                        </OverlayTrigger>
+                                        :
+                                        <OverlayTrigger
+                                            placement="right"
+                                            delay={{ show: 100, hide: 300 }}
+                                            overlay={headTooltipp}
+                                        >
+                                            <p className='smalltitle'>ראש מטה <HelpOutlineOutlinedIcon fontSize='small' /></p>
+                                        </OverlayTrigger>
+                                }
+                                {/* <OverlayTrigger
                                     placement="right"
                                     delay={{ show: 100, hide: 300 }}
                                     overlay={headTooltipp}
                                 >
                                     <p className='smalltitle'>ראש מטה <HelpOutlineOutlinedIcon fontSize='small' /></p>
-                                </OverlayTrigger>
+                                </OverlayTrigger> */}
                                 <p className='littletitle'>שם: {mid.head_office_name === "null" ? "אין" : mid.head_office_name}</p>
                                 <p className='littletitle'>טלפון: {mid.head_office_phone === "null" ? "אין" : mid.head_office_phone}</p>
                                 <OverlayTrigger
