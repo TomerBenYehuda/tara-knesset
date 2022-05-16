@@ -5,7 +5,7 @@ import Spinner from 'react-bootstrap/Spinner'
 
 
 
-export default function MembersList({ members, searchValue, knessetFilterValue, loding }) {
+export default function MembersList({ members, searchValue, knessetFilterValue, loding, membpage }) {
 
     let cc = members.filter(members => members.first_name.toLowerCase().includes(searchValue?.toLowerCase()) || members.last_name.toLowerCase().includes(searchValue?.toLowerCase()) || members.party.toLowerCase().includes(searchValue?.toLowerCase()))
     let kenesst_role = members.filter(members => members.kenesst_role.includes(knessetFilterValue))
@@ -22,7 +22,7 @@ export default function MembersList({ members, searchValue, knessetFilterValue, 
                         {
                             knessetFilterValue == "" ?
                                 <>
-                                    {searchValue == "" ? members.map(members => <MemberCard key={members.memberID} members={members} />) : cc.map(members => <MemberCard key={members.memberID} members={members} />)}
+                                    {searchValue == "" ? membpage.map(members => <MemberCard key={members.memberID} members={members} />) : cc.map(members => <MemberCard key={members.memberID} members={members} />)}
                                 </>
 
                                 :
