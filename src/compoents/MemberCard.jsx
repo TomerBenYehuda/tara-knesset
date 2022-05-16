@@ -103,31 +103,46 @@ export default function MemberCard({ members }) {
                                             <p className='smalltitle'>ראש מטה <HelpOutlineOutlinedIcon fontSize='small' /></p>
                                         </OverlayTrigger>
                                 }
-                                {/* <OverlayTrigger
-                                    placement="right"
-                                    delay={{ show: 100, hide: 300 }}
-                                    overlay={headTooltipp}
-                                >
-                                    <p className='smalltitle'>ראש מטה <HelpOutlineOutlinedIcon fontSize='small' /></p>
-                                </OverlayTrigger> */}
                                 <p className='littletitle'>שם: {mid.head_office_name === "null" ? "אין" : mid.head_office_name}</p>
                                 <p className='littletitle'>טלפון: {mid.head_office_phone === "null" ? "אין" : mid.head_office_phone}</p>
-                                <OverlayTrigger
-                                    placement="right"
-                                    delay={{ show: 100, hide: 300 }}
-                                    overlay={consultTooltipp}
-                                >
-                                    <p className='smalltitle'>יועץ פוליטי <HelpOutlineOutlinedIcon fontSize='small' /></p>
-                                </OverlayTrigger>
+                                {
+                                    isMobileOnly ?
+                                        <OverlayTrigger
+                                            placement="left"
+                                            delay={{ show: 100, hide: 300 }}
+                                            overlay={consultTooltipp}
+                                        >
+                                            <p className='smalltitle'>יועץ פוליטי <HelpOutlineOutlinedIcon fontSize='small' /></p>
+                                        </OverlayTrigger>
+                                        :
+                                        <OverlayTrigger
+                                            placement="right"
+                                            delay={{ show: 100, hide: 300 }}
+                                            overlay={consultTooltipp}
+                                        >
+                                            <p className='smalltitle'>יועץ פוליטי <HelpOutlineOutlinedIcon fontSize='small' /></p>
+                                        </OverlayTrigger>
+                                }
                                 <p className='littletitle'>שם: {mid.political_consultant_name === "null" ? "אין" : mid.political_consultant_name}</p>
                                 <p className='littletitle'>טלפון: {mid.political_consultant_phone === "null" ? "אין" : mid.political_consultant_phone}</p>
-                                <OverlayTrigger
-                                    placement="right"
-                                    delay={{ show: 100, hide: 300 }}
-                                    overlay={doverTooltip}
-                                >
-                                    <p className='smalltitle'>דובר <HelpOutlineOutlinedIcon fontSize='small' /></p>
-                                </OverlayTrigger>
+                                {
+                                    isMobileOnly ?
+                                        <OverlayTrigger
+                                            placement="left"
+                                            delay={{ show: 100, hide: 300 }}
+                                            overlay={doverTooltip}
+                                        >
+                                            <p className='smalltitle'>דובר <HelpOutlineOutlinedIcon fontSize='small' /></p>
+                                        </OverlayTrigger>
+                                        :
+                                        <OverlayTrigger
+                                            placement="right"
+                                            delay={{ show: 100, hide: 300 }}
+                                            overlay={doverTooltip}
+                                        >
+                                            <p className='smalltitle'>דובר <HelpOutlineOutlinedIcon fontSize='small' /></p>
+                                        </OverlayTrigger>
+                                }
                                 <p className='littletitle'>שם: {mid.speaker_name === "null" ? "אין" : mid.speaker_name}</p>
                                 <p className='littletitle'>טלפון: {mid.speaker_phone === "null" ? "אין" : mid.speaker_phone}</p>
                             </Col>
