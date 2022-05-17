@@ -101,7 +101,7 @@ export default function FiltersComp({ knessetRole, setKnessetFilterValue, govRol
     return (
         <div className='filterContainer'>
             <div className="filters">
-                <FormControl sx={{ m: 1, width: 150 }}>
+                <FormControl sx={{ m: 1, width: 200 }}>
                     <InputLabel id="demo-multiple-checkbox-label">קואליציה\אופוזיציה</InputLabel>
                     <Select
                         labelId="demo-multiple-checkbox-label"
@@ -123,7 +123,7 @@ export default function FiltersComp({ knessetRole, setKnessetFilterValue, govRol
                 </FormControl>
 
 
-                <FormControl sx={{ m: 1, width: 150 }}>
+                <FormControl sx={{ m: 1, width: 200 }}>
                     <InputLabel id="demo-multiple-checkbox-label">סיעה</InputLabel>
                     <Select
                         labelId="demo-multiple-checkbox-label"
@@ -144,7 +144,7 @@ export default function FiltersComp({ knessetRole, setKnessetFilterValue, govRol
                     </Select>
                 </FormControl>
 
-                <FormControl sx={{ m: 1, width: 150 }}>
+                <FormControl sx={{ m: 1, width: 200 }}>
                     <InputLabel id="demo-multiple-checkbox-label">תפקיד נוסף</InputLabel>
                     <Select
                         labelId="demo-multiple-checkbox-label"
@@ -165,7 +165,7 @@ export default function FiltersComp({ knessetRole, setKnessetFilterValue, govRol
                     </Select>
                 </FormControl>
 
-                <FormControl sx={{ m: 1, width: 150 }}>
+                <FormControl sx={{ m: 1, width: 200 }}>
                     <InputLabel id="demo-multiple-checkbox-label">תפקיד בממשלה</InputLabel>
                     <Select
                         labelId="demo-multiple-checkbox-label"
@@ -186,7 +186,7 @@ export default function FiltersComp({ knessetRole, setKnessetFilterValue, govRol
                     </Select>
                 </FormControl>
 
-                <FormControl sx={{ m: 1, width: 150 }}>
+                <FormControl sx={{ m: 1, width: 200 }}>
                     <InputLabel id="demo-multiple-checkbox-label">תפקיד בכנסת/חבר.ת בוועדה</InputLabel>
                     <Select
                         labelId="demo-multiple-checkbox-label"
@@ -212,28 +212,3 @@ export default function FiltersComp({ knessetRole, setKnessetFilterValue, govRol
     )
 }
 
-
-
-// <select value={knessetFilterValue} onChange={handlefilter}  >
-//     {console.log(knessetFilterValue)}
-//     <option value="DEFAULT" > תפקיד בכנסת</option>
-//     {
-//         govRole.map(ket => (
-
-//             <option key={ket.id} value={ket.knesset_role} >{ket.knesset_role}</option>
-//         ))
-
-//     }
-
-// </select>
-
-
-    // const handlefilter = async ({ target }) => {
-    //     // filterme()
-    //     setKnessetFilterValue(target.value);
-    //     // setPersonName(true)
-    //     console.log(knessetFilterValue);
-    // }
-
-
-    // onChange={(e) => setKnessetFilterValue(e.target.value)}
