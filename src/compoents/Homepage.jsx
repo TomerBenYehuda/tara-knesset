@@ -37,8 +37,8 @@ export default function Homepage({ members, searchValue, loding }) {
     const indexOfFirstPost = indexOfLastPost - postsPerPage;
     const currentPosts = members.slice(indexOfFirstPost, indexOfLastPost);
 
-    // Change page
-    const paginate = pageNumber => setCurrentPage(pageNumber);
+    // // Change page
+    // const paginate = pageNumber => setCurrentPage(pageNumber);
 
 
 
@@ -255,7 +255,7 @@ export default function Homepage({ members, searchValue, loding }) {
             <Paginations
                 postsPerPage={postsPerPage}
                 totalPosts={members.length}
-                paginate={paginate}
+                setCurrentPage={setCurrentPage}
                 currentPage={currentPage}
             />
             <Footer />

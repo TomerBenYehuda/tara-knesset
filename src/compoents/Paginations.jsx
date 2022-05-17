@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Paginations({ postsPerPage, totalPosts, paginate, currentPage }) {
+export default function Paginations({ postsPerPage, totalPosts, setCurrentPage, currentPage }) {
 
     const pageNumbers = [];
     for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
@@ -11,17 +11,17 @@ export default function Paginations({ postsPerPage, totalPosts, paginate, curren
         <nav aria-label="Page navigation example">
             <ul className='pagination justify-content-center'>
                 <li className="page-item">
-                    <a className="page-link" onClick={() => paginate(currentPage <= 1 ? currentPage == 1 : currentPage - 1)} href="#!">הקודם</a>
+                    <a className="page-link" onClick={() => setCurrentPage(currentPage <= 1 ? currentPage == 1 : currentPage - 1)} href="#!">הקודם</a>
                 </li>
-                {pageNumbers.map(number => (
+                {/* {pageNumbers.map(number => (
                     <li key={number} className='page-item'>
-                        <a onClick={() => paginate(number)} href='#!' className='page-link'>
+                        <a onClick={() => setCurrentPage(number)} href='#!' className='page-link'>
                             {number}
                         </a>
                     </li>
-                ))}
+                ))} */}
                 <li className="page-item">
-                    <a className="page-link" onClick={() => paginate(currentPage + 1)} href="#!">הבא</a>
+                    <a className="page-link" onClick={() => setCurrentPage(currentPage + 1)} href="#!">הבא</a>
                 </li>
             </ul>
         </nav>
