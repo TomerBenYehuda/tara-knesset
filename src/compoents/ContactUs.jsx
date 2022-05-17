@@ -10,20 +10,20 @@ export default function ContactUs() {
       <Container className='container-contactus' fluid>
         <Row>
           <Col>
-            <h1>תגידו לי מה לכתוב פה</h1>
+            <h1 className='conh1'>התקשרו עכשיו</h1>
           </Col>
 
           <Col>
-            <div className='form-contactus'>
+            <div dir='rtl' className='form-contactus'>
 
-              <h1>Contact Us</h1>
-              <input type="text" placeholder='name' />
+              <h1 className='conh1'>צור קשר</h1>
+              <input type="text" placeholder='שם' />
               <br />
-              <input type="text" placeholder='name' />
+              <input type="email" placeholder='אימייל' />
               <br />
-              <input type="text" placeholder='name' />
+              <input className='msginput' type="text" placeholder='הודעה' />
               <br />
-              <button>Send</button>
+              <button>שלח</button>
             </div>
           </Col>
         </Row>
