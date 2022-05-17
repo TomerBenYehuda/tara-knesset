@@ -22,7 +22,7 @@ export default function MembersList({ members, searchValue, knessetFilterValue, 
                 <Grid item xs={0.5} className='previuesarrow'>
                     <a onClick={() => setCurrentPage(currentPage <= 1 ? currentPage == 1 : currentPage - 1)} href="#!"><ArrowCircleLeftOutlinedIcon sx={{ fontSize: 40 }} /></a>
                 </Grid>
-                <Grid item xs={11}>
+                <Grid item xs={10.3} md={11}>
                     {
                         loding ?
                             <div id='memeberlist'>
