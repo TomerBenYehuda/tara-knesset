@@ -233,6 +233,18 @@ code {
   color: #184885;
 }
 
+.biggrid{
+  align-items: center;
+}
+
+.previuesarrow {
+  padding-left: 16px;
+}
+
+.nextarrow {
+  padding-right: 16px;
+}
+
 
 .css-4rvxkn-MuiPaper-root-MuiCard-root:hover {
   transition: 0.3s ease-in-out;
@@ -398,6 +410,14 @@ code {
     margin-bottom: 15px;
     margin-left: 0px;
     margin-right: 0px;
+  }
+
+  .biggrid{
+    align-items: normal;
+  }
+  
+  .previuesarrow {
+    padding-left: 0px;
   }
 
   .card-title {

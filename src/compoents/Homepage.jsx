@@ -37,11 +37,7 @@ export default function Homepage({ members, searchValue, loding }) {
     const indexOfFirstPost = indexOfLastPost - postsPerPage;
     const currentPosts = members.slice(indexOfFirstPost, indexOfLastPost);
 
-    // // Change page
-    // const paginate = pageNumber => setCurrentPage(pageNumber);
-
-
-
+   
     useEffect(() => {
         (async () => {
             const res = await fetch('https://keneset-api.herokuapp.com/filter/knesset_role', {
@@ -250,14 +246,15 @@ export default function Homepage({ members, searchValue, loding }) {
             <FiltersComp members={members} knessetRole={knessetRole} knessetFilterValue={knessetFilterValue} setKnessetFilterValue={setKnessetFilterValue} govRole={govRole} party={party} additionalRole={additionalRole} setIstrue={setIstrue} />
             <SubFilter securityFilter={securityFilter} lawpoliceFilter={lawpoliceFilter} foreignaffairsFilter={foreignaffairsFilter} healthwelfareFilter={healthwelfareFilter} environmentFilter={environmentFilter} cultureFilter={cultureFilter} economyFilter={economyFilter} educationFilter={educationFilter} />
             {
-                istrue ? <SubjectMemeberList showMe={showMe} security={security} lawpolice={lawpolice} foreignaffairs={foreignaffairs} healthwelfare={healthwelfare} environment={environment} culture={culture} economy={economy} education={education} /> : <MembersList members={members} searchValue={searchValue} knessetFilterValue={knessetFilterValue} loding={loding} membpage={currentPosts}/>
+                istrue ? <SubjectMemeberList showMe={showMe} security={security} lawpolice={lawpolice} foreignaffairs={foreignaffairs} healthwelfare={healthwelfare} environment={environment} culture={culture} economy={economy} education={education} /> : <MembersList members={members} searchValue={searchValue} knessetFilterValue={knessetFilterValue} loding={loding} membpage={currentPosts} setCurrentPage={setCurrentPage}
+                    currentPage={currentPage} />
             }
-            <Paginations
+            {/* <Paginations
                 postsPerPage={postsPerPage}
                 totalPosts={members.length}
                 setCurrentPage={setCurrentPage}
                 currentPage={currentPage}
-            />
+            /> */}
             <Footer />
         </div>
     )
