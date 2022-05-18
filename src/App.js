@@ -14,7 +14,7 @@ export default function App() {
   useEffect(() => {
     
     setTimeout(async () => {
-      const res = await fetch('https://keneset-api.herokuapp.com/members', {
+      const res = await fetch(`${process.env.REACT_APP_MEMBER_LIST}`, {
         method: 'GET',
         headers: { 'content-type': 'application/json' },
         credentials: "include"
