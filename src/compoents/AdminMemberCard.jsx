@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { Card, Modal, Button, Container, Col, Row } from 'react-bootstrap';
 import TextField from '@mui/material/TextField';
-
+import Popover from '@mui/material/Popover';
+import Typography from '@mui/material/Typography';
 
 export default function AdminMemberCard({ members, setUpdate }) {
 
@@ -60,6 +61,20 @@ export default function AdminMemberCard({ members, setUpdate }) {
         console.log(data);
     }
 
+    const delMember = async () => {
+        const res = await fetch(`http://localhost:5000/admin/${members.memberID}`, {
+            method: "DELETE",
+            headers: { 'content-type': 'application/json; charset=UTF-8' },
+            credentials: "include"
+        });
+        const data = await res.json()
+        if (data.err) {
+            alert(data.err)
+        } else {
+            setUpdate((up) => !up)
+        }
+    }
+
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
@@ -68,6 +83,19 @@ export default function AdminMemberCard({ members, setUpdate }) {
         localStorage.id = members.memberID
         setShow(true)
     }
+
+    const [anchorEl, setAnchorEl] = React.useState(null);
+
+    const handleClick1 = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
+
+    const handleClose1 = () => {
+        setAnchorEl(null);
+    };
+
+    const open = Boolean(anchorEl);
+    const id = open ? 'simple-popover' : undefined;
 
 
     return (
@@ -81,6 +109,29 @@ export default function AdminMemberCard({ members, setUpdate }) {
                     <Card.Text>
                         {members.gov_role}
                     </Card.Text>
+                    <Button variant="danger" aria-describedby={id} onClick={handleClick1}>
+                        מחק
+                    </Button>
+                    <Popover
+                        id={id}
+                        open={open}
+                        anchorEl={anchorEl}
+                        onClose={handleClose1}
+                        anchorOrigin={{
+                            vertical: 'top',
+                            horizontal: 'right',
+                        }}
+                    >
+                        <Typography sx={{ p: 2 }}>פעולה זו תמחק את החבר
+
+                        </Typography>
+                        <Button variant="danger" style={{ margin: 30 }} onClick={delMember}>
+                            מחק
+                        </Button>
+                        <Button onClick={handleClose1}>
+                            בטל
+                        </Button>
+                    </Popover>
                 </Card.Body>
             </Card>
 
