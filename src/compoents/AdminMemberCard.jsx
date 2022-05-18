@@ -100,10 +100,8 @@ export default function AdminMemberCard({ members, setUpdate }) {
 
     return (
         <>
-
-
-            <Card style={{ width: '18rem' }} key={members.memberID} onClick={handleShow}>
-                <Card.Img src={members.picture} />
+            <Card style={{ width: '18rem' }} key={members.memberID}>
+                <Card.Img src={members.picture} onClick={handleShow} />
                 <Card.Body>
                     <Card.Title>{members.first_name} {members.last_name}</Card.Title>
                     <Card.Text>
@@ -197,8 +195,6 @@ export default function AdminMemberCard({ members, setUpdate }) {
                         </Button>
                     </Modal.Footer>
                 </Modal>)}
-
-
         </>
     )
 }
