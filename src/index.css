@@ -472,7 +472,6 @@ code {
 
   .rowfirst {
     margin-top: 5px;
-    flex-direction: row-reverse;
   }
 
   .smalltitle {
