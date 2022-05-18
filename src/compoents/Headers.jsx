@@ -53,7 +53,7 @@ export default function Headers({ searchValue, setSearchValue }) {
       </div>
       <div className='logo'>
         <h5 onClick={() => goTo("contactus")}>צור קשר</h5>
-        <img className='logojo' src="https://i.ibb.co/HPpJqPp/logo.png" alt="logo" onClick={() => goTo("")} />
+        <img className='logojo' src="https://i.ibb.co/9TLp7sj/logo-1.png" alt="logo" onClick={() => goTo("")} />
         <img className='logotara' src="https://i.ibb.co/KcZgHKm/1.png" alt="logo" onClick={() => goTo("")} />
       </div>
 
