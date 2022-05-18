@@ -62,7 +62,7 @@ export default function AdminMemberCard({ members, setUpdate }) {
     }
 
     const delMember = async () => {
-        const res = await fetch(`http://localhost:5000/admin/${members.memberID}`, {
+        const res = await fetch(`https://keneset-api.herokuapp.com/admin/${members.memberID}`, {
             method: "DELETE",
             headers: { 'content-type': 'application/json; charset=UTF-8' },
             credentials: "include"
