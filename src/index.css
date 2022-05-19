@@ -708,6 +708,8 @@ hr {
 
 .contactus {
   padding-top: 90px;
+  margin-bottom: 50px;
+
 }
 
 .container-contactus {
@@ -732,15 +734,26 @@ hr {
   font-size: 72px;
 }
 
+.conh2{
+  color: #184885;
+  font-family: 'Heebo';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  margin-left: 20px;
+}
+
 .form-contactus>input {
   margin-bottom: 15px;
   width: 350px;
 }
 
 .form-contactus>button {
-  width: 150px;
+  width: 350px;
   background-color: #5276A4;
   color: #FFFFFF;
+  height: 50px;
+  border: 0;
 }
 
 .msginput {
@@ -787,6 +800,10 @@ hr {
   .conh1 {
     padding-top: 15px;
     font-size: 48px;
+  }
+
+  .conh2{
+    font-size: 28px;
   }
 
   .undoicao {

@@ -13,7 +13,7 @@ export default function ContactUs() {
   const navigate = useNavigate()
 
 
-  const goBackHome =()=>{
+  const goBackHome = () => {
     navigate('/')
   }
 
@@ -30,7 +30,12 @@ export default function ContactUs() {
       <Container className='container-contactus' fluid>
         <Row>
           <Col>
-            <h1 className='conh1'>התקשרו עכשיו</h1>
+            <div dir='rtl' className='conh2'>
+              <p>חבר כנסת התפטר מתפקידו?</p>
+              <p>יש דובר חדש לשר?</p>
+              <p>זיהית פרט לא מעודכן?</p>
+              <p >אנא כתוב לנו ונתקן בהקדם.</p>
+            </div>
             <UndoIcon sx={{ fontSize: 70 }} className='undoicao' />
             <p>03-544-4407</p>
             <p><a href='mailto:Office@tara-il.com'>Office@tara-il.com</a> :דוא״ל</p>
@@ -44,7 +49,7 @@ export default function ContactUs() {
               <br />
               <input type="email" placeholder='מייל' />
               <br />
-              <textarea className='msginput' type="text" placeholder='חבר כנסת התפטר מתפקידו? יש דובר חדש לשר? זיהית פרט לא מעודכן? אנא כתוב לנו ונתקן בהקדם.' />
+              <textarea className='msginput' type="text" placeholder='השאירו פרטים' />
               <br />
               <button>שלח</button>
             </div>
