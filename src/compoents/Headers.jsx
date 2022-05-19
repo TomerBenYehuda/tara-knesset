@@ -40,7 +40,6 @@ export default function Headers({ searchValue, setSearchValue }) {
   return (
     <div className='header'>
       <div className="d-flex">
-        <Form >
           {
             searchValue ?
               <a href="#memeberlist" >
@@ -49,6 +48,7 @@ export default function Headers({ searchValue, setSearchValue }) {
               :
               <span></span>
           }
+        <Form >
           <FormControl
             onChange={(e) => setSearchValue(e.target.value)}
             onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault() }}
