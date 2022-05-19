@@ -32,8 +32,8 @@ export default function ContactUs() {
           <Col>
             <h1 className='conh1'>התקשרו עכשיו</h1>
             <UndoIcon sx={{ fontSize: 70 }} className='undoicao' />
-            <p>052-123456</p>
-            <p>Email: Office@tara-il.com</p>
+            <p>03-544-4407</p>
+            <p><a href='mailto:Office@tara-il.com'>Office@tara-il.com</a> :דוא״ל</p>
           </Col>
 
           <Col>
