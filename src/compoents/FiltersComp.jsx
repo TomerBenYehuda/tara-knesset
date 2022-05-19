@@ -186,7 +186,7 @@ export default function FiltersComp({ knessetRole, setKnessetFilterValue, govRol
                     </Select>
                 </FormControl>
 
-                <FormControl sx={{ m: 1, width: 200 }}>
+                <FormControl sx={{ m: 1, width: 250 }}>
                     <InputLabel id="demo-multiple-checkbox-label">תפקיד בכנסת/חבר.ת בוועדה</InputLabel>
                     <Select
                         labelId="demo-multiple-checkbox-label"
