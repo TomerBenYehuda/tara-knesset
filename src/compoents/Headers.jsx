@@ -5,6 +5,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Drawer from '@mui/material/Drawer';
 import Button from '@mui/material/Button';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
+import ArrowCircleDownOutlinedIcon from '@mui/icons-material/ArrowCircleDownOutlined';
 
 
 export default function Headers({ searchValue, setSearchValue }) {
@@ -40,6 +41,14 @@ export default function Headers({ searchValue, setSearchValue }) {
     <div className='header'>
       <div className="d-flex">
         <Form >
+          {
+            searchValue ?
+              <a href="#memeberlist" >
+                <ArrowCircleDownOutlinedIcon sx={{ color: "white", fontSize: 38 }} />
+              </a>
+              :
+              <span></span>
+          }
           <FormControl
             onChange={(e) => setSearchValue(e.target.value)}
             onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault() }}
@@ -54,7 +63,7 @@ export default function Headers({ searchValue, setSearchValue }) {
       <div className='logo'>
         <h5 onClick={() => goTo("contactus")}>צור קשר</h5>
         <img className='logojo' src="https://i.ibb.co/9TLp7sj/logo-1.png" alt="logo" onClick={() => goTo("")} />
-        <img className='logotara' src="https://i.ibb.co/KcZgHKm/1.png" alt="logo" onClick={() => goTo("")} />
+        <img className='logotara' src="https://tara-il.com/wp-content/uploads/2021/11/cropped-logo.png" alt="logo" onClick={() => goTo("")} />
       </div>
 
       <div className='formobileonly'>
@@ -67,9 +76,9 @@ export default function Headers({ searchValue, setSearchValue }) {
               anchor={"right"}
               open={state}
               onClose={toggleDrawer(false)}
-            > 
+            >
               <img className='logojo' src="https://i.ibb.co/9TLp7sj/logo-1.png" alt="logo" onClick={() => goTo("")} />
-              <img className='logotara' src="https://i.ibb.co/KcZgHKm/1.png" alt="logo-tara" onClick={() => goTo("")} />
+              <img className='logotara' src="https://tara-il.com/wp-content/uploads/2021/11/cropped-logo.png" alt="logo-tara" onClick={() => goTo("")} />
               <h5 onClick={() => goTo("contactus")}>צור קשר</h5>
             </Drawer>
           </ThemeProvider>

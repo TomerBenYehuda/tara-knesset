@@ -772,7 +772,7 @@ hr {
 
   .form-contactus>input {
     margin-bottom: 15px;
-    width: 300px;
+    width: 299px;
   }
 
   .form-contactus>button {
@@ -780,7 +780,7 @@ hr {
   }
 
   .msginput {
-    width: 300px;
+    width: 299px;
     height: 100px;
   }
 
@@ -791,6 +791,21 @@ hr {
 
   .undoicao {
     margin-right: 200px;
+  }
+
+  .btnclass {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .backtohome {
+    width: 150px;
+    background-color: #5276A4;
+    color: #FFFFFF;
+    height: 50px;
+    border: 0;
+    border-radius: 30px;
   }
 
 }
