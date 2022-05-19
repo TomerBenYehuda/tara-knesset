@@ -717,11 +717,15 @@ hr {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
   width: 550px;
-  height: 400px;
+  height: 480px;
 }
 
 .conh1 {
-  color: #184885
+  color: #184885;
+  font-family: 'Heebo';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 72px;
 }
 
 .form-contactus>input {
@@ -737,6 +741,12 @@ hr {
 
 .msginput {
   height: 100px;
+}
+
+.undoicao {
+  transform: rotate(-100deg);
+  margin-right: 361px;
+  color: #5276A4;
 }
 
 @media screen and (max-width: 600px) {
@@ -760,8 +770,17 @@ hr {
     width: 300px;
   }
 
+  .form-contactus>button {
+    width: 150px;
+  }
+
   .conh1 {
     padding-top: 15px;
+    font-size: 48px;
+  }
+
+  .undoicao {
+    margin-right: 200px;
   }
 
 }
