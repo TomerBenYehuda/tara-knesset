@@ -14,7 +14,7 @@ export default function ContactUs() {
         <Row>
           <Col>
             <h1 className='conh1'>התקשרו עכשיו</h1>
-            <UndoIcon sx={{fontSize: 70}} className='undoicao'/>
+            <UndoIcon sx={{ fontSize: 70 }} className='undoicao' />
             <p>052-123456</p>
             <p>רחוב עם שם מגניב</p>
           </Col>
@@ -27,7 +27,7 @@ export default function ContactUs() {
               <br />
               <input type="email" placeholder='אימייל' />
               <br />
-              <input className='msginput' type="text" placeholder='הודעה' />
+              <textarea className='msginput' type="text" placeholder='חבר כנסת התפטר מתפקידו? יש דובר חדש לשר? זיהית פרט לא מעודכן? אנא כתוב לנו ונתקן בהקדם.' />
               <br />
               <button>שלח</button>
             </div>

@@ -740,7 +740,8 @@ hr {
 }
 
 .msginput {
-  height: 100px;
+  width: 350px;
+  height: 150px;
 }
 
 .undoicao {
@@ -772,6 +773,11 @@ hr {
 
   .form-contactus>button {
     width: 150px;
+  }
+
+  .msginput {
+    width: 300px;
+    height: 100px;
   }
 
   .conh1 {
