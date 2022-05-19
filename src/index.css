@@ -514,6 +514,10 @@ code {
   text-align: right;
 }
 
+#demo-multiple-checkbox-label{
+  right: 50px
+}
+
 .css-yb0lig {
   color: #184885;
   margin-right: 5px;

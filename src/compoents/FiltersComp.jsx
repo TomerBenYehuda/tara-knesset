@@ -109,9 +109,10 @@ export default function FiltersComp({ knessetRole, setKnessetFilterValue, govRol
                         multiple
                         value={filtername5}
                         onChange={handleChange5}
-                        input={<OutlinedInput label="קואליציה\אופזיציה" />}
+                        variant="standard"
+                        // input={<OutlinedInput label="קואליציה\אופזיציה" />}
                         renderValue={(selected) => selected.join(', ')}
-                        MenuProps={MenuProps}
+                        MenuProps={MenuPropss}
                     >
                         {position.map((position) => (
                             <MenuItem className='menuitemselect' key={position} value={position}>
@@ -131,7 +132,8 @@ export default function FiltersComp({ knessetRole, setKnessetFilterValue, govRol
                         multiple
                         value={filtername3}
                         onChange={handleChange3}
-                        input={<OutlinedInput label="סיעה" />}
+                        variant="standard"
+                        // input={<OutlinedInput label="סיעה" />}
                         renderValue={(selected) => selected.join(', ')}
                         MenuProps={MenuPropss}
                     >
@@ -152,7 +154,8 @@ export default function FiltersComp({ knessetRole, setKnessetFilterValue, govRol
                         multiple
                         value={filtername4}
                         onChange={handleChange4}
-                        input={<OutlinedInput label="תפקיד נוסף" />}
+                        variant="standard"
+                        // input={<OutlinedInput label="תפקיד נוסף" />}
                         renderValue={(selected) => selected.join(', ')}
                         MenuProps={MenuProps}
                     >
@@ -173,7 +176,8 @@ export default function FiltersComp({ knessetRole, setKnessetFilterValue, govRol
                         multiple
                         value={filtername2}
                         onChange={handleChange2}
-                        input={<OutlinedInput label="תפקיד בממשלה" />}
+                        variant="standard"
+                        // input={<OutlinedInput label="תפקיד בממשלה" />}
                         renderValue={(selected) => selected.join(', ')}
                         MenuProps={MenuProps}
                     >
@@ -194,7 +198,8 @@ export default function FiltersComp({ knessetRole, setKnessetFilterValue, govRol
                         multiple
                         value={filtername}
                         onChange={handleChange}
-                        input={<OutlinedInput label="תפקיד בכנסת/חבר.ת בוועדה" />}
+                        variant="standard"
+                        // input={<OutlinedInput label="תפקיד בכנסת/חבר.ת בוועדה" />}
                         renderValue={(selected) => selected.join(', ')}
                         MenuProps={MenuProps}
                     >
