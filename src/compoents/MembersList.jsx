@@ -10,11 +10,27 @@ import ArrowCircleLeftOutlinedIcon from '@mui/icons-material/ArrowCircleLeftOutl
 export default function MembersList({ members, searchValue, knessetFilterValue, loding, membpage, setCurrentPage, currentPage }) {
 
     let cc = members.filter(members => members.first_name.toLowerCase().includes(searchValue?.toLowerCase()) || members.last_name.toLowerCase().includes(searchValue?.toLowerCase()) || members.party.toLowerCase().includes(searchValue?.toLowerCase()))
-    let kenesst_role = members.filter(members => members.kenesst_role.includes(knessetFilterValue))
+    // let kenesst_role = members.filter(members => members.kenesst_role.includes(knessetFilterValue))
     let gov_role = members.filter(members => knessetFilterValue.includes(members.gov_role))
     let party = members.filter(members => knessetFilterValue.includes(members.party))
     let additional_role = members.filter(members => knessetFilterValue.includes(members.additional_role))
     let position = members.filter(members => members.position.includes(knessetFilterValue))
+
+    const filteredMembers = [];
+
+    members.forEach(member => {
+        if (member.kenesst_role != null) {
+            let memberWithArray = { ...member, kenesst_role: member.kenesst_role.split(',') };
+            const newRoles = memberWithArray.kenesst_role.map(item => item.trim());
+            memberWithArray = { ...member, kenesst_role: newRoles };
+            const filteredRoles = memberWithArray.kenesst_role.filter(specificRole => knessetFilterValue.includes(specificRole))
+
+            if (filteredRoles.length > 0) {
+                filteredMembers.push(member);
+            }
+        }
+
+    });
 
     return (
         <div>
@@ -34,7 +50,7 @@ export default function MembersList({ members, searchValue, knessetFilterValue, 
 
                                         :
                                         <>
-                                            {kenesst_role.map(members => <MemberCard key={members.memberID} members={members} />)}
+                                            {filteredMembers.map(members => <MemberCard key={members.memberID} members={members} />)}
                                             {gov_role.map(members => <MemberCard key={members.memberID} members={members} />)}
                                             {party.map(members => <MemberCard key={members.memberID} members={members} />)}
                                             {additional_role.map(members => <MemberCard key={members.memberID} members={members} />)}
