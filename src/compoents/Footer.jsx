@@ -12,18 +12,7 @@ export default function Footer() {
     return (
         <div className='footercomp'>
             <div className='footersection'>
-                {/* <div>
-                    <a href="https://www.facebook.com/"><img className='iconsfooter' src="https://i.ibb.co/PMSRjRy/facebook.png" alt="facebook"></img></a>
-                    <a href="https://www.facebook.com/"><img className='iconsfooter' src="https://i.ibb.co/5Gxv9cr/send.png" alt="facebook"></img></a>
-                    <a href="https://www.facebook.com/"><img className='iconsfooter' src="https://i.ibb.co/BwSb2GG/instagram-1.png" alt="facebook"></img></a>
-                    <a href="https://www.facebook.com/"><img className='iconsfooter' src="https://i.ibb.co/bXy2gs2/linkedin.png" alt="facebook"></img></a>
-                </div>
-                <div className='linksfooter'>
-                    <p>פניה לחבר כנסת</p>
-                    <p onClick={() => takeMe("contactus")}>צור קשר</p>
-                    <p>הצוות שלנו</p>
-                    <p>אודות</p>
-                </div> */}
+                <img className='junexlogo' src="https://i.ibb.co/fvVG4S8/Whats-App-Image-2022-05-22-at-5-07-48-PM-removebg-preview.png" alt='junexlogo'></img>
             </div>
             <hr></hr>
             <p className='rights'>כל הזכויות שמורות ©</p>

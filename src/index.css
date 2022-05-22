@@ -670,26 +670,11 @@ code {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding-top: 80px;
+  padding-top: 20px;
 }
 
-.linksfooter {
-  display: flex;
-}
-
-.linksfooter>p {
-  margin-left: 50px;
-  color: #FFFEFF;
-  cursor: pointer;
-}
-
-.iconsfooter {
-  width: 24px;
-  height: 24px;
-  border-radius: 5px;
-  background: #FFFFFF;
-  padding: 4px;
-  margin-left: 5px;
+.junexlogo{
+  width: 100px;
 }
 
 hr {
