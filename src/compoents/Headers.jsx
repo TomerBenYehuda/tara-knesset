@@ -6,6 +6,7 @@ import Drawer from '@mui/material/Drawer';
 import Button from '@mui/material/Button';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import ArrowCircleDownOutlinedIcon from '@mui/icons-material/ArrowCircleDownOutlined';
+import { isMobileOnly } from 'react-device-detect';
 
 
 export default function Headers({ searchValue, setSearchValue }) {
@@ -53,7 +54,7 @@ export default function Headers({ searchValue, setSearchValue }) {
             onChange={(e) => setSearchValue(e.target.value)}
             onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault() }}
             type="search"
-            placeholder="חיפוש מפלגה, חבר כנסת"
+            placeholder={isMobileOnly ? "🔍 חיפוש מפלגה, חבר כנסת" : "🔍                                                                                             חיפוש מפלגה, חבר כנסת"}
             value={searchValue}
             className="me-2"
             aria-label="Search"
