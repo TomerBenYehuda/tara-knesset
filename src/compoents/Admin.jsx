@@ -28,6 +28,10 @@ export default function Admin({ members, searchValue, setUpdate }) {
     navigate('/tara-admin/addnewmember')
   }
 
+  const goTo1 = () => {
+    navigate(`/tara-admin/addnewmembers`)
+  }
+
   return (
     <div>
       {
@@ -52,6 +56,7 @@ export default function Admin({ members, searchValue, setUpdate }) {
               </div>
               <div className='btnadmindiv'>
                 <Button className='addnewuserbtn' variant="primary" onClick={goTo} >הוסף חבר כנסת חדש</Button>
+                <Button className='addnewuserbtn' variant="primary" onClick={goTo1} >הוסף רשימה של חברי כנסת</Button>
                 <Button variant="primary" onClick={logout}>Logout</Button>
               </div>
             </div>

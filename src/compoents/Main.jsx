@@ -1,6 +1,7 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Admin from './Admin'
+import AdminAddExcel from './AdminAddExcel'
 import AdminAddMember from './AdminAddMember'
 import AdminLogin from './AdminLogin'
 import ContactUs from './ContactUs'
@@ -15,6 +16,7 @@ export default function Main({members,searchValue,loding, setUpdate}) {
                 <Route path="/login" element={<AdminLogin />} />
                 <Route path="/tara-admin" element={<Admin members={members} searchValue={searchValue} setUpdate={setUpdate} />} />
                 <Route path="/tara-admin/addnewmember" element={<AdminAddMember members={members} searchValue={searchValue} setUpdate={setUpdate} />} />
+                <Route path="/tara-admin/addnewmemberS" element={<AdminAddExcel />} />
             </Routes>
         </div>
     )
